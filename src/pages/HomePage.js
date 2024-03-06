@@ -1,3 +1,4 @@
+import React from 'react';
 
 export default function HomePage() {
     return (
@@ -11,8 +12,8 @@ export default function HomePage() {
   }
   
   const HeroSection = ()=>(
-  <section class="hero-section">
-  <div class="hero-content">
+  <section className="hero-section">
+  <div className="hero-content">
   <h1>אורי שמאי מטפל במגע - גוף ונפש</h1>
   <p>מגוון טיפולי מסאז' מרגיעים ומאזנים</p>
   <button>לתיאום טיפול</button>
@@ -20,13 +21,13 @@ export default function HomePage() {
   </section>
   )
   const AboutSection = () => (
-<section class="about-section">
-  <div class="about-container">
-    <div class="about-content">
-      <div class="about-image-container">
+<section className="about-section">
+  <div className="about-container">
+    <div className="about-content">
+      <div className="about-image-container">
         <img src="uri.webp" alt="אורי שמאי" width="400px" height="500px" />
       </div>
-      <div class="about-text-container">
+      <div className="about-text-container">
         <h2>קצת עליי</h2>
         <p>
           אורי שמאי - מטפל מוסמך, בוגר המכללה לרפואה אלטרנטיבית תאילנד קוסמוי ומכללת ברק. 
