@@ -91,6 +91,8 @@ p {
 /* navbar */
 .navbar-logo {
   align-self: center;
+  position: relative;
+    top: 3px;
 }
 
 a.navbar-logo:hover {
@@ -125,7 +127,6 @@ a.navbar-logo:hover {
 .navbar-links a:hover {
   color: #4a2e1e;
 }
-
 
 /* Highlight style */
 .highlight {
