@@ -38,6 +38,95 @@ p {
   margin: 1rem 0;
 }
 
+.side-social-links {
+  position: fixed;
+  top: 25%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  /* background-color: #fff; */
+  border-radius: 5px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  z-index: 1000;
+}
+
+.side-social-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  /* color: #333; */
+  outline: 3px solid #a46000; /* Adjust color and width */
+  border-radius: 300px;
+  transition: all 0.1s ease;
+}
+
+.side-social-link:hover {
+  outline:  3px solid #4a2e1e;/* Adjust color and width */
+  border-radius: 300px;
+  /* border-color: #ffc107; */
+}
+
+.side-social-link img {
+  width: 30px; /* Set the width of the image */
+  height: 30px; /* Set the height of the image */
+}
+
+
+/* Navbar styles */
+.navbar {
+  background: #f0ebe3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8vh;
+  z-index: 10;
+}
+/* navbar */
+.navbar-logo {
+  align-self: center;
+}
+
+a.navbar-logo:hover {
+  background-color: white !important;
+}
+
+.navbar-links {
+  display: flex;
+  flex-grow: 1;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.navbar-links li {
+  padding: 1rem 2vw;
+}
+
+.navbar-links a {
+  color: #a46000;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  transition: all 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #4a2e1e;
+}
+
+
 /* Highlight style */
 .highlight {
   background-color: #a46000;
@@ -74,8 +163,6 @@ margin-bottom: 5%;
   border-radius:0 100px 0 100px;
   
 }
-
-
 
 
 .contact-section {
@@ -127,7 +214,7 @@ line-height:1.1;}
   text-align: center;
   color: #333;
   direction: rtl;
-  top: 8vh;
+  top: 3vh;
   min-height: 100vh;
   justify-content: center;
   margin-left: 10%;
@@ -214,7 +301,7 @@ line-height:1.1;}
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 8vh;
+  top: 7vh;
 }
 
 .footer-content {
@@ -274,68 +361,11 @@ line-height:1.1;}
   font-weight: 500;
 }
 
-/* Navbar styles */
-.navbar {
-  background: #f0ebe3;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 8vh;
-  z-index: 10;
-}
-
-.navbar-logo {
-  align-self: center;
-}
-
-a.navbar-logo:hover {
-  background-color: white !important;
-}
-
-.navbar-links {
-  display: flex;
-  flex-grow: 1;
-}
-
-.navbar-links ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style: none;
-}
-
-.navbar-links li {
-  padding: 1rem 2vw;
-}
-
-.navbar-links a {
-  color: #a46000;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.2rem;
-  display: block;
-  transition: all 0.2s;
-}
-
-.navbar-links a:hover {
-  color: #4a2e1e;
-}
-
-.navbar-toggle {
-  display: none;
-  font-size: 3vh;
-  color: white;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  background-color: blue;
-}
 
 @media screen and (max-width: 768px) {
+  .navbar-links a{
+    font-size: 0.9rem;
+  }
   .footer-content {
     /* flex-direction: column; */
     align-items: center;
@@ -348,33 +378,17 @@ a.navbar-logo:hover {
     width: 1.2rem;
     height: 1.2rem;
   }
-  .site-links {
-    justify-content: center;
+  .hero-section{
+    height: 70vh;
   }
-
-  .navbar {
+  .about-container {
     flex-direction: column;
-    height: auto;
   }
-
-  .navbar-toggle {
-    display: block;
-    align-self: flex-end;
+  .about-image-container {
+    margin-bottom: 20px;
   }
-
-  .navbar-links {
-    display: none;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    padding: 1rem;
-  }
-
-  .navbar-links.active {
-    display: flex;
-    flex-direction: column;
+  .contact-section p{
+    font-size: 1em;
   }
 }
 section {
@@ -519,21 +533,6 @@ section {
   }
 }
 
-@media (max-width: 768px) {
-  .hero-section{
-    height: 70vh;
-  }
-  .about-container {
-    flex-direction: column;
-  }
-
-  .about-image-container {
-    margin-bottom: 20px;
-  }
-  .contact-section p{
-    font-size: 1em;
-  }
-}
 
 .about h2 {
   font-weight: bold;

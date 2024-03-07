@@ -5,15 +5,18 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import TreatmentsPage from './pages/Treatments';
 import Footer from './Components/Footer';
+import { AccessibilityWidget } from "react-accessibility";
 import './App.css'
+import SocialLinks from './Components/SocialLinks';
 
 function App() {
 
   return (
     <div className="App">
-      
+      <SocialLinks/>
+            <AccessibilityWidget />
+
       <BrowserRouter>
-      
         <Navbar />
 
         <Routes>
