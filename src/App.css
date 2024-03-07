@@ -97,6 +97,7 @@ p {
 
 a.navbar-logo:hover {
   background-color: white !important;
+  border-radius: 90%;
 }
 
 .navbar-links {
