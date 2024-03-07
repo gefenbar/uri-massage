@@ -9,7 +9,7 @@ export default function SocialLinks() {
         <img src={"email.webp"} alt="Email" />
       </a>
       <a
-        href="tel:050-7431-189"
+        href="tel:050-7431-198"
         className={`side-social-link`}
       >
         <img src={"phone.webp"} alt="Phone" />

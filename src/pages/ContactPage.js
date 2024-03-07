@@ -10,7 +10,7 @@ export default function ContactPage() {
         לתיאום טיפול או בכל שאלה, אנא פנו אליי באמצעות:
       </p>
       <p>
-        טלפון: <a href='tel:0507431189'>050-7431-189<br/></a>
+        טלפון: <a href='tel:0507431189'>050-7431-198<br/></a>
        אימייל: <a href='mailto:uriss100@gmail.com'>uriss100@gmail.com</a><br/> 
        פייסבוק:<a href='www.facebook.com/uriss45'> אורי שמאי - מטפל במגע</a>
        </p>

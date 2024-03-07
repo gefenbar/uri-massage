@@ -6,7 +6,7 @@ export default function Footer() {
           <a href="https://www.facebook.com/uriss45" rel="noreferrer" className="social-link" target='_blank'>
             <img src="facebook.webp" alt="Facebook" />
           </a>
-          <a href="https://api.whatsapp.com/send?phone=+972507431189" rel="noreferrer" className="social-link" target='_blank'>
+          <a href="https://api.whatsapp.com/send?phone=+972507431198" rel="noreferrer" className="social-link" target='_blank'>
             <img src="whatsapp.webp" alt="WhatsApp" />
           </a>
           <a href="https://www.instagram.com/uri.massage/" rel="noreferrer" className="social-link" target='_blank'>
