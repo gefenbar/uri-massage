@@ -5,7 +5,12 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+a{
+  text-decoration: none;
+}
+.emoji{
+  font-size:30px;
+}
 /* Global styles */
 body {
   font-family: Arial, sans-serif;
@@ -128,7 +133,7 @@ a.navbar-logo:hover {
 .navbar-links a:hover {
   color: #4a2e1e;
 }
-
+  
 /* Highlight style */
 .highlight {
   background-color: #a46000;
@@ -148,11 +153,10 @@ a.navbar-logo:hover {
 .treatments-section h2{
 margin-bottom: 5%;
 }
-.treatments-section button {
+.treatments-section a {
   margin-top: 30px;
   background-color: #b19a86;
   color: #fff;
-  border: 0.125rem solid #f0ebe3;
   padding: 1.5rem 1.5rem;
   font-size: 1.3rem;
   border-radius: 100px 0 100px 0;
@@ -161,7 +165,7 @@ margin-bottom: 5%;
   font-weight: 500;
 }
 
-.treatments-section button:hover {
+.treatments-section a:hover {
   border-radius:0 100px 0 100px;
   
 }
@@ -207,7 +211,31 @@ font-size: 1.2em;}
 }
 .contact-page{
 gap: 5px;
-line-height:1.1;}
+line-height:1.1;
+}
+.contact-page a{
+  font-weight: 600;
+  font-size: smaller;
+}
+.contact-page .phone-color{
+  color: #2196f3;
+}
+.contact-page .email-color{
+  color: #ff2147;
+}
+.contact-page .facebook-color{
+  color: black;
+}
+
+.contact-page a:hover{
+color:green;
+}
+
+.contact-page img{
+position: relative;
+top:5px;
+left:10px
+}
 .about-page {
   position: relative;
   display: flex;
@@ -303,7 +331,7 @@ line-height:1.1;}
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 7vh;
+  top: 5vh;
 }
 
 .footer-content {
@@ -365,6 +393,9 @@ line-height:1.1;}
 
 
 @media screen and (max-width: 768px) {
+  .hero-section{
+    height: 55vh;
+  }
   .navbar-links a{
     font-size: 0.9rem;
   }
@@ -449,9 +480,10 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   font-weight: 600;
 }
-
+.hero-section button a {
+color: #4a2e1e;}
 .hero-section button:hover {
-  transform: scale(1.05); /* Grow the button by 5% */
+  transform: scale(1.12); /* Grow the button by 5% */
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 

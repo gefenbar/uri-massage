@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
     return (
@@ -16,8 +17,9 @@ export default function HomePage() {
   <div className="hero-content">
   <h1>אורי שמאי מטפל במגע - גוף ונפש</h1>
   <p>מגוון טיפולי מסאז' מרגיעים ומאזנים</p>
-  <button>לתיאום טיפול</button>
-  </div>
+<br/>
+  <button><Link to="/treatments">לתיאום טיפול</Link>
+  </button>  </div>
   </section>
   )
   const AboutSection = () => (
@@ -33,7 +35,7 @@ export default function HomePage() {
           אורי שמאי - מטפל מוסמך, בוגר המכללה לרפואה אלטרנטיבית תאילנד קוסמוי ומכללת ברק. 
           אני מבצע מגוון טיפולים, ביניהם: עיסוי שוודי, עיסוי לנשים בהריון, עיסוי תינוקות, טיפול בקריסטלים ועוד.
         </p>
-        <a href="#yyy" >לפרטים נוספים וקביעת תור</a>
+        <Link to="/contact" >לפרטים נוספים וקביעת תור</Link>
       </div>
     </div>
   </div>
@@ -78,8 +80,14 @@ export default function HomePage() {
             <p className="treatment-title">{treatment.title}</p>
           </div>
         ))}
+        
       </div>
-      <button>לטיפולים נוספים</button>
+      <br/>
+      <br/>
+      <br/>
+      <Link className="more" to="/treatments">לטיפולים נוספים</Link>
+      <br/>
+      <br/>
     </section>
   )
   const ContactSection = () => ( 
