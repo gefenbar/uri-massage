@@ -202,9 +202,14 @@ a.navbar-logo:hover {
   text-align: center;
   color: #333;
   direction: rtl;
-  /* top: 8vh; */
+  top: 13.5vh;
   min-height: 100vh;
   justify-content: center;
+}
+.treatment-page h1 {
+  color: #4a2e1e;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 .contact-page {
   position: relative;
@@ -214,7 +219,7 @@ a.navbar-logo:hover {
   text-align: center;
   color: #333;
   direction: rtl;
-  top: 8vh;
+  top: 3vh;
   min-height: 100vh;
   justify-content: center;
   gap: 5px;
@@ -618,7 +623,7 @@ section {
     font-size: 1em;
   }
   .contact-page {
-    padding: 20px 50px 50px 50px;
+    padding: 50px 50px 50px 50px;
   }
   .navbar-logo img {
     width: 40px;
