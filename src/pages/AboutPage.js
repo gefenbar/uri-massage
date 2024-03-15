@@ -29,7 +29,7 @@ export default function AboutPage() {
               <li>נרות הופי</li>
               <li>פוט מסאז' תאילנדי מקורי</li>
               <li>רפלקסולוגיה</li>
-              <li>טיפול בצלילים מרפאים (Healing sounds)</li>
+              <li>טיפול בצלילים מרפאים (Sound Healing)</li>
             </ul>
             <p>
               אני מטפל בקליניקה שלי בקיבוץ ארז וניתן לתאם טיפול במקום בימים
