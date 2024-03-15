@@ -601,7 +601,7 @@ color: #4a2e1e;}
     font-size:14px;
   }
   .hero-content{
-    margin:25% 0 0px 0px;
+    margin:25% 0 15px 15px;
   }
   .about-container {
     flex-direction: column;
