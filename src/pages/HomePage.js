@@ -54,22 +54,27 @@ export const TreatmentsSection = ({
     {
       title: "עיסוי תינוקות",
       image: "baby-massage.webp",
-    },
+      url: "babies"
+        },
     {
       title: "Sound Healing",
       image: "soundHealing.webp",
+      url: "sound"
     },
     {
       title: "עיסוי לנשים הרות",
       image: "pregnancy-massage.webp",
+      url: "pregnant"
     },
     {
       title: "כוסות רוח",
       image: "cups.webp",
+      url: "cups"
     },
     {
       title: "טיפול בקריסטלים",
       image: "crystals-massage.webp",
+      url: "crystals"
     },
   ];
 
@@ -90,7 +95,8 @@ export const TreatmentsSection = ({
               alt={treatment.title}
               className="treatment-image"
             />
-            <p className="treatment-title">{treatment.title}</p>
+            <p className="treatment-title"><Link to={treatment.url}>
+{treatment.title}</Link></p>
           </div>
         ))}
       </div>

@@ -151,7 +151,7 @@ a.navbar-logo:hover {
 .treatments-section h2 {
   margin-bottom: 5%;
 }
-.treatments-section a {
+.treatments-section .more {
   margin-top: 30px;
   background-color: #b19a86;
   color: #fff;
@@ -508,7 +508,7 @@ section {
   width: 70%;
 }
 
-.about-text-container a {
+.about-text-container .contact-link {
   font-size: 16px;
   font-weight: bold;
   color: #fff;
@@ -518,11 +518,22 @@ section {
   border-radius: 5px;
   padding: 10px;
 }
-.about-text-container a:hover {
+.about-text-container .contact-link:hover {
   transition: 0.3s linear;
   /* color: #fff; */
   background-color: #4a2e1e;
   /* border-color: #a46000; */
+}
+.treatments-list li a{
+  color:#a46000;
+}
+.treatments-list li:hover{
+  transition: 0.3s linear;
+  background-color: #a46000;
+}
+.treatments-list li a:hover{
+  transition: 0.3s linear;
+color:white;
 }
 
 @media (max-width: 900px) {
@@ -582,8 +593,9 @@ section {
   border-radius: 0.5rem;
 }
 
-.treatment-title {
+.treatment-title a{
   font-weight: bold;
+color: #4a2e1e!important;
 }
 @media screen and (max-width: 768px) {
   .emoji {

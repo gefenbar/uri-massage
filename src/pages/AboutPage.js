@@ -16,29 +16,52 @@ export default function AboutPage() {
             <p>
               אני מתמחה במגוון עיסויים שמטרתם להרגיע, לאזן ולשפר את התחושה
               הכללית. אני בוגר המכללה לרפואה אלטרנטיבית תאילנד קוסמוי וכן בוגר
-              הכשרה מקצועית במכללת ברק. 
+              הכשרה מקצועית במכללת ברק.
             </p>
             <h3> הטיפולים שלי:</h3>
             <ul className="treatments-list">
-              <li>עיסוי שוודי קלאסי</li>
-              <li>עיסוי עמוק בעזרת מקלות במבוק</li>
-              <li>עיסוי נשים בהריון</li>
-              <li>עיסוי תינוקות, כולל סדנאות להורים</li>
-              <li>כוסות רוח</li>
-              <li>עיסוי פנים רפואי</li>
-              <li>נרות הופי</li>
-              <li>פוט מסאז' תאילנדי מקורי</li>
-              <li>רפלקסולוגיה</li>
-              <li>טיפול בצלילים מרפאים (Sound Healing)</li>
+              <li>
+                <Link to="/sweedish">עיסוי שוודי קלאסי</Link>
+              </li>
+              <li>
+                <Link to="/deep-tissue">עיסוי עמוק בעזרת מקלות במבוק</Link>
+              </li>
+              <li>
+                <Link to="/pregnancy">עיסוי נשים בהריון</Link>
+              </li>
+              <li>
+                <Link to="/infant-massage">
+                  עיסוי תינוקות, כולל סדנאות להורים
+                </Link>
+              </li>
+              <li>
+                <Link to="/cups">כוסות רוח</Link>
+              </li>
+              <li>
+                <Link to="/facial-massage">עיסוי פנים רפואי</Link>
+              </li>
+              <li>
+                <Link to="/hopi-candles">נרות הופי</Link>
+              </li>
+              <li>
+                <Link to="/thai-foot-massage">פוט מסאז' תאילנדי מקורי</Link>
+              </li>
+              <li>
+                <Link to="/reflexology">רפלקסולוגיה</Link>
+              </li>
+              <li>
+                <Link to="/sound-healing">
+                  טיפול בצלילים מרפאים (Sound Healing)
+                </Link>
+              </li>
             </ul>
             <p>
               אני מטפל בקליניקה שלי בקיבוץ ארז וניתן לתאם טיפול במקום בימים
               א'-ו'. מוזמנים ליצור קשר וליהנות מטיפול מקצועי ומפנק!
             </p>
-            <Link to="/contact">דברו איתי             <span className="emoji">&#128588;</span>
-
-</Link>
-
+            <Link className="contact-link" to="/contact">
+              דברו איתי <span className="emoji">&#128588;</span>
+            </Link>
           </div>
         </div>
       </div>
