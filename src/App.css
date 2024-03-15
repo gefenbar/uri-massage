@@ -406,11 +406,6 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  /* margin-bottom: 5%; */
-  /* margin-top: 10%; */
-  /* padding:0; */
-  /* margin-left: 5%; */
-  /* margin-right: 5%; */
 }
 .hero-content {
   position: relative;
@@ -600,7 +595,13 @@ color: #4a2e1e;}
     height: 1.2rem;
   }
   .hero-section{
-    height: 75vh;
+    height:75vh;
+  }
+  .hero-section button{
+    font-size:14px;
+  }
+  .hero-content{
+    margin:25% 0 0px 0px;
   }
   .about-container {
     flex-direction: column;
