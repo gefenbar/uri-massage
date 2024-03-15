@@ -15,7 +15,7 @@ export default function HomePage() {
   const HeroSection = ()=>(
   <section className="hero-section">
   <div className="hero-content">
-  <h1>אורי שמאי מטפל במגע - גוף ונפש</h1>
+  <h1>אורי שמאי מטפל במגע וצליל</h1>
   <p>מגוון טיפולי מסאז' מרגיעים ומאזנים</p>
 <br/>
   <button><Link to="/treatments">לתיאום טיפול</Link>
@@ -66,7 +66,7 @@ export default function HomePage() {
       image: 'crystals-massage.webp', 
     }
   ];
-  const TreatmentsSection = () => (
+  export const TreatmentsSection = () => (
     <section className="treatments-section">
       <h2>טיפולים</h2>
       <div className="treatment-cards">
