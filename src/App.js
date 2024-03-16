@@ -8,6 +8,17 @@ import Footer from "./Components/Footer";
 import { AccessibilityWidget } from "react-accessibility";
 import "./App.css";
 import SocialLinks from "./Components/SocialLinks";
+import Babies from "./pages/treatments/Babies";
+import Pregnanat from "./pages/treatments/Pregnant"
+import Cups from "./pages/treatments/Cups"
+import Crystals from "./pages/treatments/Crystals"
+import Bamboo from "./pages/treatments/Bamboo"
+import Sweedish from "./pages/treatments/Sweedish"
+import Thai from "./pages/treatments/Thai"
+import Candles from "./pages/treatments/Candles"
+import Reflexology from "./pages/treatments/Reflexology"
+import Face from "./pages/treatments/Face"
+import Sound from "./pages/treatments/Sound"
 
 function App() {
   return (
@@ -22,6 +33,19 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/treatments" element={<TreatmentsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/babies" element={<Babies />} />
+          <Route path="/thai" element={<Thai />} />
+          <Route path="/sound" element={<Sound />} />
+          <Route path="/pregnanat" element={<Pregnanat />} />
+          <Route path="/cups" element={<Cups />} />
+          <Route path="/crystals" element={<Crystals />} />
+          <Route path="/bamboo" element={<Bamboo />} />
+          <Route path="/sweedish" element={<Sweedish />} />
+          <Route path="/candles" element={<Candles />} />
+          <Route path="/reflexology" element={<Reflexology />} />
+          <Route path="/face" element={<Face />} />
+
+
         </Routes>
         <Footer />
       </BrowserRouter>

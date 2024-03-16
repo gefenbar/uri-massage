@@ -48,33 +48,34 @@ const AboutSection = () => (
 
 export const TreatmentsSection = ({
   additionalTreatments,
-  showLink = true, showTitle=true
+  showLink = true,
+  showTitle = true,
 }) => {
   let treatments = [
     {
       title: "עיסוי תינוקות",
       image: "baby-massage.webp",
-      url: "babies"
-        },
+      url: "/babies",
+    },
     {
       title: "Sound Healing",
       image: "soundHealing.webp",
-      url: "sound"
+      url: "/sound",
     },
     {
       title: "עיסוי לנשים הרות",
       image: "pregnancy-massage.webp",
-      url: "pregnant"
+      url: "/pregnant",
     },
     {
       title: "כוסות רוח",
       image: "cups.webp",
-      url: "cups"
+      url: "/cups",
     },
     {
       title: "טיפול בקריסטלים",
       image: "crystals-massage.webp",
-      url: "crystals"
+      url: "/crystals",
     },
   ];
 
@@ -84,9 +85,7 @@ export const TreatmentsSection = ({
 
   return (
     <section className="treatments-section">
-      {showTitle &&(
-      <h2>טיפולים</h2>
-      )}
+      {showTitle && <h2>טיפולים</h2>}
       <div className="treatment-cards">
         {treatments.map((treatment, index) => (
           <div className="treatment-card" key={index}>
@@ -95,8 +94,9 @@ export const TreatmentsSection = ({
               alt={treatment.title}
               className="treatment-image"
             />
-            <p className="treatment-title"><Link to={treatment.url}>
-{treatment.title}</Link></p>
+            <p className="treatment-title">
+              <Link to={treatment.url}>{treatment.title}</Link>
+            </p>
           </div>
         ))}
       </div>

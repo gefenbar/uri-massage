@@ -205,6 +205,7 @@ a.navbar-logo:hover {
   top: 13.5vh;
   min-height: 100vh;
   justify-content: center;
+  margin-bottom: 4vh;
 }
 .treatment-page h1 {
   color: #4a2e1e;
@@ -596,6 +597,10 @@ color:white;
 .treatment-title a{
   font-weight: bold;
 color: #4a2e1e!important;
+transition: color 0.6s ;
+}
+.treatment-title a:hover{
+  color: #a46000!important;
 }
 @media screen and (max-width: 768px) {
   .emoji {
