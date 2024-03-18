@@ -39,7 +39,7 @@ const AboutSection = () => (
             (Sound Healing), עיסוי שוודי, עיסוי לנשים בהריון, עיסוי תינוקות,
             טיפול בקריסטלים ועוד.
           </p>
-          <Link to="/contact">לפרטים נוספים וקביעת תור</Link>
+          <Link className="contact-link" to="/contact">לפרטים נוספים וקביעת תור</Link>
         </div>
       </div>
     </div>
