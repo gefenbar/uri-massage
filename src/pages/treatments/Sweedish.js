@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default  function  BabyMassagePage () {
+export default  function  Sweedish () {
   return (
     <div>
       <h1>עיסוי שוודי קלאסי</h1>

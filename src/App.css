@@ -220,7 +220,7 @@ a.navbar-logo:hover {
   text-align: center;
   color: #333;
   direction: rtl;
-  top: 3vh;
+  top: 8vh;
   min-height: 100vh;
   justify-content: center;
   gap: 5px;
@@ -261,6 +261,8 @@ a.navbar-logo:hover {
   color: #333;
   direction: rtl;
   /* top: 3vh; */
+  /* top: 8vh; */
+  /* margin-bottom: 8vh; */
   min-height: 100vh;
   justify-content: center;
   margin-left: 10%;
@@ -476,8 +478,9 @@ section {
 }
 
 .about-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
+  
 }
 
 .about-content {
