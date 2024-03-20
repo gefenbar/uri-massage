@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+html{background-color: white;}
 a {
   text-decoration: none;
 }
@@ -213,6 +214,9 @@ a.navbar-logo:hover {
   font-weight: bold;
 }
 .contact-page {
+  background-color: white;
+  margin-left: 10%;
+  margin-right: 10%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -224,10 +228,12 @@ a.navbar-logo:hover {
   min-height: 100vh;
   justify-content: center;
   gap: 5px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   line-height: 1.1;
   /* padding-left: 5px; */
   /* padding-right: 5px; */
+  margin-bottom: 5%;
+
 }
 .contact-page a {
   font-weight: 600;
@@ -351,7 +357,7 @@ a.navbar-logo:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 4vh;
+  top: 5vh;
 }
 
 .footer-content {
@@ -649,4 +655,86 @@ transition: color 0.6s ;
     width: 40px;
     height: 40px;
   }
+  .p-treatments {
+  padding: 0px!important;
+  }
 }
+
+/* General Styles */
+
+ 
+ .page-single-treatment {
+  margin-top: 8vh;
+margin-left:10%;
+margin-right: 10%;
+  /* margin: 0 auto; */
+  padding-top: 10%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  background-color: white;
+  direction: rtl;
+  
+
+ }
+ 
+ /* Headings */
+ .h1-single-treatment {
+  /* font-size: 2.5rem; */
+  /* font-weight: 700; */
+  /* color: #007bff; */
+  text-align: center;
+  /* margin-bottom: 20px; */
+ }
+ 
+ /* Paragraphs */
+ .h2-single-treatment {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  padding:3%;
+  line-height: 1.6;
+  text-align: center;
+  /* position: relative; */
+margin-left: 10%;
+margin-right: 10%;
+ }
+ 
+ .list-single-treatment li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+ }
+ 
+ .list-single-treatment ul {
+  margin:20px;
+ }
+ 
+ 
+ .img-single-treatment
+  {
+ width: 50%;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
+ 
+ /* Button */
+ .btn-book-treatment {
+  display: block;
+  width: 200px;
+  margin: 30px auto 0;
+  padding: 10px;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+ }
+ 
+ .btn-book-treatment:hover {
+  background-color: #0056b3;
+ }
