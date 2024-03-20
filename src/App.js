@@ -36,7 +36,7 @@ function App() {
           <Route path="/babies" element={<Babies />} />
           <Route path="/thai" element={<Thai />} />
           <Route path="/sound" element={<Sound />} />
-          <Route path="/pregnanat" element={<Pregnanat />} />
+          <Route path="/pregnant" element={<Pregnanat />} />
           <Route path="/cups" element={<Cups />} />
           <Route path="/crystals" element={<Crystals />} />
           <Route path="/bamboo" element={<Bamboo />} />
