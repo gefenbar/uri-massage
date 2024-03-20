@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function CuppingTherapy() {
  return (
@@ -63,12 +64,11 @@ export default function CuppingTherapy() {
      </div>
      <img
        className="img-single-treatment"
-       src="cupping-therapy.webp"
+       src="crystals-massage.webp"
        alt="כוסות רוח"
      />
-     <a href="/book-treatment" className="btn-book-treatment">
-       הזמינו טיפול עכשיו!
-     </a>
+     <Link to="/contact"  className="btn-book-treatment">הזמינו טיפול עכשיו!</Link>
+
    </div>
  );
 }

@@ -235,9 +235,10 @@ a.navbar-logo:hover {
   margin-bottom: 5%;
 
 }
-.contact-page a {
-  font-weight: 600;
-  font-size: smaller;
+.contact-page .some-text {
+  font-weight: 500;
+  /* font-size: smaller; */
+  color:#a46000;
 }
 .contact-page .phone-color {
   color: #2196f3;
@@ -534,16 +535,16 @@ section {
   background-color: #4a2e1e;
   /* border-color: #a46000; */
 }
-.treatments-list li a{
-  color:#a46000;
+.treatments-list li{
+  color:#a46000!important;
 }
 .treatments-list li:hover{
   transition: 0.3s linear;
   background-color: #a46000;
 }
-.treatments-list li a:hover{
+.treatments-list li:hover{
   transition: 0.3s linear;
-color:white;
+color:white!important;
 }
 
 @media (max-width: 900px) {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function ThaiFootMassage() {
  return (
@@ -66,9 +67,8 @@ export default function ThaiFootMassage() {
        src="crystals-massage.webp"
        alt="פוט מסאז' תאילנדי"
      />
-     <a href="/book-treatment" className="btn-book-treatment">
-       הזמינו טיפול עכשיו!
-     </a>
+               <Link to="/contact"  className="btn-book-treatment">הזמינו טיפול עכשיו!</Link>
+
    </div>
  );
 }

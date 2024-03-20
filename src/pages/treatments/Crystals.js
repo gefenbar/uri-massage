@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Crystals() {
  return (
@@ -62,12 +63,11 @@ export default function Crystals() {
      </div>
      <img
        className="img-single-treatment"
-       src="crystal-healing.webp"
+       src="crystals-massage.webp"
        alt="ריפוי בקריסטלים"
      />
-     <a href="/book-treatment" className="btn-book-treatment">
-       הזמינו טיפול עכשיו!
-     </a>
+      <Link to="/contact"  className="btn-book-treatment">הזמינו טיפול עכשיו!</Link>
+
    </div>
  );
 }

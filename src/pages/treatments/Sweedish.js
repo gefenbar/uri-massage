@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Sweedish() {
   return (
@@ -61,10 +62,9 @@ export default function Sweedish() {
           </ul>
         </div>
       </div>
-      <img className="img-single-treatment" src="sweedish-massage.webp" alt="עיסוי שוודי" />
-      <a href="/book-treatment" className="btn-book-treatment">
-        הזמינו טיפול עכשיו!
-      </a>
+      <img className="img-single-treatment" src="crystals-massage.webp" alt="עיסוי שוודי" />
+      <Link to="/contact"  className="btn-book-treatment">הזמינו טיפול עכשיו!</Link>
+
     </div>
   );
 }

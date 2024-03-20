@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function SoundHealing() {
  return (
@@ -63,12 +64,11 @@ export default function SoundHealing() {
      </div>
      <img
        className="img-single-treatment"
-       src="sound-healing.webp"
+       src="crystals-massage.webp"
        alt="טיפול בצלילים מרפאים"
      />
-     <a href="/book-treatment" className="btn-book-treatment">
-       הזמינו טיפול עכשיו!
-     </a>
+                 <Link to="/contact"  className="btn-book-treatment">הזמינו טיפול עכשיו!</Link>
+
    </div>
  );
 }

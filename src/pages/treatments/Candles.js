@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function EarCandling() {
  return (
@@ -63,12 +64,11 @@ export default function EarCandling() {
      </div>
      <img
        className="img-single-treatment"
-       src="ear-candling.webp"
+       src="crystals-massage.webp"
        alt="נרות הופי"
      />
-     <a href="/book-treatment" className="btn-book-treatment">
-       הזמינו טיפול עכשיו!
-     </a>
+       <Link to="/contact"  className="btn-book-treatment">הזמינו טיפול עכשיו!</Link>
+
    </div>
  );
 }

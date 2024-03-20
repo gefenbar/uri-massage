@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function BambooMassage() {
  return (
@@ -63,12 +64,11 @@ export default function BambooMassage() {
      </div>
      <img
        className="img-single-treatment"
-       src="bamboo-massage.webp"
+       src="crystals-massage.webp"
        alt="עיסוי מקלות במבוק"
      />
-     <a href="/book-treatment" className="btn-book-treatment">
-       הזמינו טיפול עכשיו!
-     </a>
+       <Link to="/contact"  className="btn-book-treatment">הזמינו טיפול עכשיו!</Link>
+
    </div>
  );
 }

@@ -20,40 +20,56 @@ export default function AboutPage() {
             </p>
             <h3> הטיפולים שלי:</h3>
             <ul className="treatments-list">
+            <Link to="/sweedish">
               <li>
-                <Link to="/sweedish">עיסוי שוודי קלאסי</Link>
+                עיסוי שוודי קלאסי
               </li>
+              </Link>
+              <Link to="/bamboo">
               <li>
-                <Link to="/deep-tissue">עיסוי עמוק בעזרת מקלות במבוק</Link>
+                עיסוי עמוק בעזרת מקלות במבוק
               </li>
+              </Link>
+              <Link to="/pregnant">
               <li>
-                <Link to="/pregnancy">עיסוי נשים בהריון</Link>
+               עיסוי נשים בהריון
               </li>
-              <li>
-                <Link to="/infant-massage">
+              </Link>
+                <Link to="/babies">
+                <li>
                   עיסוי תינוקות, כולל סדנאות להורים
+                  </li>
                 </Link>
-              </li>
+                <Link to="/cups">
               <li>
-                <Link to="/cups">כוסות רוח</Link>
+                כוסות רוח
               </li>
+              </Link>
+              <Link to="/face">
               <li>
-                <Link to="/facial-massage">עיסוי פנים רפואי</Link>
+              עיסוי פנים רפואי
               </li>
+              </Link>
+              <Link to="/candles">
               <li>
-                <Link to="/hopi-candles">נרות הופי</Link>
+               נרות הופי
               </li>
+              </Link>
+              <Link to="/thai">
               <li>
-                <Link to="/thai-foot-massage">פוט מסאז' תאילנדי מקורי</Link>
+                פוט מסאז' תאילנדי מקורי
               </li>
+              </Link>
+              <Link to="/reflexology">
               <li>
-                <Link to="/reflexology">רפלקסולוגיה</Link>
+                רפלקסולוגיה
               </li>
+              </Link>
+              <Link to="/sound">
               <li>
-                <Link to="/sound-healing">
                   טיפול בצלילים מרפאים (Sound Healing)
-                </Link>
               </li>
+              </Link>
             </ul>
             <p>
               אני מטפל בקליניקה שלי בקיבוץ ארז וניתן לתאם טיפול במקום בימים
