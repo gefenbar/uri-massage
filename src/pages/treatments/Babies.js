@@ -51,7 +51,7 @@ export default function BabyMassage() {
       <div className="list-single-treatment">
         <h3>התמחויות נוספות</h3>
         <div>
-          בנוסף לעיסוי תינוקות, אנו מציעים גם טיפולים מתמחים כגון:
+          בנוסף לעיסוי תינוקות, אנו מציעים גם טיפולים כגון:
           <ul>
             <li>עיסוי לנשים הרות</li>
             <li>רפלקסולוגיה</li>

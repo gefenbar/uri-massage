@@ -52,7 +52,7 @@ export default function PregnancyMassage() {
      <div className="list-single-treatment">
        <h3>התמחויות נוספות</h3>
        <div>
-         בנוסף לעיסוי לנשים הרות, אנו מציעים גם טיפולים מתמחים כגון:
+         בנוסף לעיסוי לנשים הרות, אנו מציעים גם טיפולים כגון:
          <ul>
            <li>עיסוי שוודי קלאסי</li>
            <li>עיסוי רקמות עמוקות</li>

@@ -52,7 +52,7 @@ export default function FacialMassage() {
      <div className="list-single-treatment">
        <h3>התמחויות נוספות</h3>
        <div>
-         בנוסף לעיסוי פנים, אנו מציעים גם טיפולים מתמחים כגון:
+         בנוסף לעיסוי פנים, אנו מציעים גם טיפולים כגון:
          <ul>
            <li>עיסוי שוודי קלאסי</li>
            <li>עיסוי ראש וצוואר</li>

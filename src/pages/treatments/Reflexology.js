@@ -52,7 +52,7 @@ export default function Reflexology() {
      <div className="list-single-treatment">
        <h3>התמחויות נוספות</h3>
        <div>
-         בנוסף לרפלקסולוגיה, אנו מציעים גם טיפולים מתמחים כגון:
+         בנוסף לרפלקסולוגיה, אנו מציעים גם טיפולים כגון:
          <ul>
            <li>עיסוי שוודי קלאסי</li>
            <li>עיסוי רקמות עמוקות</li>

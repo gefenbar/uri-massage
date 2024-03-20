@@ -52,7 +52,7 @@ export default function ThaiFootMassage() {
      <div className="list-single-treatment">
        <h3>התמחויות נוספות</h3>
        <div>
-         בנוסף לפוט מסאז' תאילנדי, אנו מציעים גם טיפולים מתמחים כגון:
+         בנוסף לפוט מסאז' תאילנדי, אנו מציעים גם טיפולים כגון:
          <ul>
            <li>עיסוי תאילנדי מלא גוף</li>
            <li>עיסוי שוודי קלאסי</li>
