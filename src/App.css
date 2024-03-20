@@ -235,6 +235,7 @@ a.navbar-logo:hover {
   margin-bottom: 5%;
 
 }
+
 .contact-page .some-text {
   font-weight: 500;
   /* font-size: smaller; */
@@ -661,6 +662,9 @@ color:white!important;
   }
   .p-treatments {
   padding: 0px!important;
+  }
+  .contact-page p{
+    font-size: 1rem;
   }
 }
 
