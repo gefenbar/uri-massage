@@ -88,16 +88,17 @@ export const TreatmentsSection = ({
       {showTitle && <h2>טיפולים</h2>}
       <div className="treatment-cards">
         {treatments.map((treatment, index) => (
-          <div className="treatment-card" key={index}>
+          <button className="treatment-card" key={index}>
+             <Link to={treatment.url}>
             <img
               src={treatment.image}
               alt={treatment.title}
               className="treatment-image"
             />
             <p className="treatment-title">
-              <Link to={treatment.url}>{treatment.title}</Link>
             </p>
-          </div>
+            {treatment.title}</Link>
+          </button>
         ))}
       </div>
       <br />

@@ -591,8 +591,19 @@ color:white;
   width: 70%;
   max-width: 250px;
   transition: transform 0.3s ease;
+  border: none;
+
+}
+  .treatment-card a{
+    font-weight: bold;
+    color: #4a2e1e!important;
+    transition: color 0.6s ;
+    font-size:larger;
 }
 
+.treatment-card a:hover{
+  color: #a46000!important;
+}
 .treatment-card:hover {
   transform: translateY(-0.3125rem);
 }
@@ -603,14 +614,6 @@ color:white;
   border-radius: 0.5rem;
 }
 
-.treatment-title a{
-  font-weight: bold;
-color: #4a2e1e!important;
-transition: color 0.6s ;
-}
-.treatment-title a:hover{
-  color: #a46000!important;
-}
 @media screen and (max-width: 768px) {
   .emoji {
     font-size: 25px;
