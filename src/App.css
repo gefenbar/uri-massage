@@ -624,9 +624,9 @@ transition: color 0.6s ;
     width: 1.2rem;
     height: 1.2rem;
   }
-  .hero-section {
+  /* .hero-section {
     height: 75vh;
-  }
+  } */
   .hero-section button {
     font-size: 14px;
   }
