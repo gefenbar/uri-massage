@@ -29,7 +29,7 @@ const AboutSection = () => (
     <div className="about-container">
       <div className="about-content">
         <div className="about-image-container">
-          <img src="uri.webp" alt="אורי שמאי" width="400px" height="500px" />
+          <img src="uri.webp" alt="אורי שמאי" loading="lazy" width="400px" height="500px" />
         </div>
         <div className="about-text-container">
           <h2>קצת עליי</h2>

@@ -9,7 +9,7 @@ import TreatmentsPage from "./pages/Treatments";
 import Footer from "./Components/Footer";
 import { AccessibilityWidget } from "react-accessibility";
 import "./App.css";
-import Crystals from "./pages/treatments/Crystals"
+import Crystals from "./pages/treatmenss/Crystals"
 import SocialLinks from "./Components/SocialLinks";
 import Babies from "./pages/treatments/Babies";
 import Pregnanat from "./pages/treatments/Pregnant"
