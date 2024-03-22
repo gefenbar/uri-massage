@@ -10,7 +10,13 @@ export default function AboutPage() {
         </div>
         <div className="about-content">
           <div className="about-image-container">
-            <img src="uri.webp" alt="אורי שמאי" width="400px" height="500px" />
+            <img
+              src="uri.webp"
+              alt="אורי שמאי"
+              loading="lazy"
+              width="400px"
+              height="500px"
+            />
           </div>
           <div className="about-text-container">
             <p>
@@ -20,55 +26,35 @@ export default function AboutPage() {
             </p>
             <h3> הטיפולים שלי:</h3>
             <ul className="treatments-list">
-            <Link to="/sweedish">
-              <li>
-                עיסוי שוודי קלאסי
-              </li>
+              <Link to="/sweedish">
+                <li>עיסוי שוודי קלאסי</li>
               </Link>
               <Link to="/bamboo">
-              <li>
-                עיסוי עמוק בעזרת מקלות במבוק
-              </li>
+                <li>עיסוי עמוק בעזרת מקלות במבוק</li>
               </Link>
               <Link to="/pregnant">
-              <li>
-               עיסוי נשים בהריון
-              </li>
+                <li>עיסוי נשים בהריון</li>
               </Link>
-                <Link to="/babies">
-                <li>
-                  עיסוי תינוקות, כולל סדנאות להורים
-                  </li>
-                </Link>
-                <Link to="/cups">
-              <li>
-                כוסות רוח
-              </li>
+              <Link to="/babies">
+                <li>עיסוי תינוקות, כולל סדנאות להורים</li>
+              </Link>
+              <Link to="/cups">
+                <li>כוסות רוח</li>
               </Link>
               <Link to="/face">
-              <li>
-              עיסוי פנים רפואי
-              </li>
+                <li>עיסוי פנים רפואי</li>
               </Link>
               <Link to="/candles">
-              <li>
-               נרות הופי
-              </li>
+                <li>נרות הופי</li>
               </Link>
               <Link to="/thai">
-              <li>
-                פוט מסאז' תאילנדי מקורי
-              </li>
+                <li>פוט מסאז' תאילנדי מקורי</li>
               </Link>
               <Link to="/reflexology">
-              <li>
-                רפלקסולוגיה
-              </li>
+                <li>רפלקסולוגיה</li>
               </Link>
               <Link to="/sound">
-              <li>
-                  טיפול בצלילים מרפאים (Sound Healing)
-              </li>
+                <li>טיפול בצלילים מרפאים (Sound Healing)</li>
               </Link>
             </ul>
             <p>

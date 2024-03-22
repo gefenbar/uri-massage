@@ -66,6 +66,8 @@ export default function ThaiFootMassage() {
        className="img-single-treatment"
        src="crystals-massage.webp"
        alt="פוט מסאז' תאילנדי"
+       loading='lazy'
+
      />
                <Link to="/contact"  className="btn-book-treatment">הזמינו טיפול עכשיו!</Link>
 

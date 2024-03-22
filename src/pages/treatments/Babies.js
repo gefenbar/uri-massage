@@ -65,6 +65,7 @@ export default function BabyMassage() {
         className="img-single-treatment"
         src="crystals-massage.webp"
         alt="עיסוי תינוקות"
+        loading='lazy'
       />
        <Link to="/contact"  className="btn-book-treatment">הזמינו טיפול עכשיו!</Link>
 

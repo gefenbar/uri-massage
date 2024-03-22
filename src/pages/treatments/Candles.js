@@ -66,6 +66,7 @@ export default function EarCandling() {
        className="img-single-treatment"
        src="crystals-massage.webp"
        alt="נרות הופי"
+       loading='lazy'
      />
        <Link to="/contact"  className="btn-book-treatment">הזמינו טיפול עכשיו!</Link>
 

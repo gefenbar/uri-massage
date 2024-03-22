@@ -93,6 +93,7 @@ export const TreatmentsSection = ({
             <img
               src={treatment.image}
               alt={treatment.title}
+              loading="lazy"
               className="treatment-image"
             />
             <p className="treatment-title">

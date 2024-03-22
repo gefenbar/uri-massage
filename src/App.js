@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Navbar from "./Components/Navbar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -7,19 +9,28 @@ import TreatmentsPage from "./pages/Treatments";
 import Footer from "./Components/Footer";
 import { AccessibilityWidget } from "react-accessibility";
 import "./App.css";
+import Crystals from "./pages/treatments/Crystals"
 import SocialLinks from "./Components/SocialLinks";
 import Babies from "./pages/treatments/Babies";
 import Pregnanat from "./pages/treatments/Pregnant"
 import Cups from "./pages/treatments/Cups"
-import Crystals from "./pages/treatments/Crystals"
 import Bamboo from "./pages/treatments/Bamboo"
 import Sweedish from "./pages/treatments/Sweedish"
 import Thai from "./pages/treatments/Thai"
 import Candles from "./pages/treatments/Candles"
-import Reflexology from "./pages/treatments/Reflexology"
+import Reflexology from "./pages/treatments/Reflexolog"
 import Face from "./pages/treatments/Face"
 import Sound from "./pages/treatments/Sound"
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 function App() {
   return (
     <div className="App">
@@ -27,6 +38,8 @@ function App() {
       <AccessibilityWidget />
 
       <BrowserRouter>
+      <ScrollToTop />
+
         <Navbar />
         <Routes>
           <Route exact path="/" element={<HomePage />} />

@@ -66,6 +66,7 @@ export default function SoundHealing() {
        className="img-single-treatment"
        src="crystals-massage.webp"
        alt="טיפול בצלילים מרפאים"
+       loading='lazy'
      />
                  <Link to="/contact"  className="btn-book-treatment">הזמינו טיפול עכשיו!</Link>
 
