@@ -18,7 +18,7 @@ import Bamboo from "./pages/treatments/Bamboo"
 import Sweedish from "./pages/treatments/Sweedish"
 import Thai from "./pages/treatments/Thai"
 import Candles from "./pages/treatments/Candles"
-import Reflexology from "./pages/treatments/Reflexolog"
+import Reflexology from "./pages/treatments/Reflexology"
 import Face from "./pages/treatments/Face"
 import Sound from "./pages/treatments/Sound"
 
