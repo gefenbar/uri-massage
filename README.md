@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+<!DOCTYPE html>
+<html lang="en">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uri Shamai - Touch and Sound Treatments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
 
-## Available Scripts
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
 
-In the project directory, you can run:
+        h1,
+        h2 {
+            color: #333;
+        }
 
-### `npm start`
+        h2 {
+            margin-top: 20px;
+        }
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+        p {
+            color: #666;
+        }
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
 
-### `npm test`
+        button:hover {
+            background-color: #0056b3;
+        }
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
 
-### `npm run build`
+        a:hover {
+            text-decoration: underline;
+        }
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        .more {
+            display: block;
+            margin-top: 20px;
+        }
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+        .treatment-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+        .treatment-card {
+            flex: 1 1 200px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+        }
 
-### `npm run eject`
+        .treatment-image {
+            width: 100%;
+            border-radius: 5px;
+        }
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+        .contact-section {
+            margin-top: 40px;
+        }
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+        .contact-section p {
+            margin: 5px 0;
+        }
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+            h1 {
+                font-size: 24px;
+            }
 
-## Learn More
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<body>
+    <div class="container">
+        <h1>Uri Shamai - Touch and Sound Treatments</h1>
+        <p>This is a website for Uri Shamai's touch and sound treatments, offering a variety of relaxing and balancing treatments. The site includes sections for learning about Uri Shamai, exploring treatments offered, and contacting for appointments.</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+        <h2>Getting Started</h2>
+        <p>To get started with the project, clone this repository and install the necessary dependencies using npm:</p>
+        <pre><code>npm install</code></pre>
+        <p>Then, you can start the development server:</p>
+        <pre><code>npm start</code></pre>
 
-### Code Splitting
+        <h2>Technologies Used</h2>
+        <ul>
+            <li>React</li>
+            <li>React Router</li>
+            <li>CSS</li>
+        </ul>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+        <h2>Components</h2>
 
-### Analyzing the Bundle Size
+        <h3>HomePage</h3>
+        <p>The <code>HomePage</code> component serves as the main entry point for the website, displaying sections for the hero, about, treatments, and contact.</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+        <h3>HeroSection</h3>
+        <p>The <code>HeroSection</code> component displays a hero image and a call-to-action button for coordinating treatments.</p>
 
-### Making a Progressive Web App
+        <h3>AboutSection</h3>
+        <p>The <code>AboutSection</code> component provides information about Uri Shamai, including qualifications and the range of treatments offered.</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+        <h3>TreatmentsSection</h3>
+        <p>The <code>TreatmentsSection</code> component displays a variety of treatments offered, with the option to show additional treatments and a link to view more treatments.</p>
 
-### Advanced Configuration
+        <h3>ContactSection</h3>
+        <p>The <code>ContactSection</code> component provides contact information for Uri Shamai, including address, phone number, email, and opening hours.</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+        <h2>Contact</h2>
+        <p>For more information about Uri Shamai's treatments and to make an appointment, visit the website or contact directly using the provided contact details.</p>
+    </div>
+</body>
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</html>
