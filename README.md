@@ -1,43 +1,40 @@
-# Uri Shamai - Holistic Therapist
+# Uri Shamai - Treats Touch and Sound
 
-Welcome to the website of Uri Shamai, offering a range of treatments focused on touch and sound therapy for relaxation and balance.
+Welcome to the official website of Uri Shamai, a qualified therapist offering a variety of relaxing and balancing treatments. Explore the world of healing touch and soothing sound with our range of services designed to promote overall well-being.
 
-## Table of Contents
-- [About](#about)
-- [Treatments](#treatments)
-- [Contact](#contact)
+## About Uri Shamai
 
----
+Uri Shamai is a graduate of the prestigious Thai Kosmoi College of Alternative Medicine and Barak College. With a deep passion for holistic healing, Uri specializes in various therapeutic modalities, including:
 
-## About
-Uri Shammai is a qualified therapist, graduate of the Thai Kosmoi College of Alternative Medicine and Barak College. He offers a variety of treatments, including Sound Healing, Swedish Massage, Massage for Pregnant Women, Baby Massage, and Treatment with Crystals, among others.
-
-### About Uri
-![Uri Shammai](uri.webp)
-
----
+- Sound Healing
+- Swedish Massage
+- Massage for Pregnant Women
+- Baby Massage
+- Crystal Therapy
 
 ## Treatments
-Uri offers a variety of relaxing and balancing treatments, including:
 
-- **Baby Massage**
-- **Sound Healing**
-- **Massage for Pregnant Women**
-- **Cups**
-- **Crystal Massage**
+### Sound Healing
 
-![Treatments](treatments.webp)
+Experience the transformative power of sound as Uri guides you through a rejuvenating sound healing session. Using ancient techniques and specialized instruments, this treatment aims to restore balance, reduce stress, and promote deep relaxation.
 
-For more details and to make an appointment, visit the [Contact](#contact) section.
+### Massage Therapy
 
----
+Indulge in the nurturing touch of Uri's expert massage techniques. Whether you seek relief from muscle tension, enhanced circulation, or a moment of tranquility, our massage services are tailored to your individual needs.
 
-## Contact
-- **Address:** Kibbutz Erez
-- **Phone:** 0507431189
-- **Email:** uriss100@gmail.com
-- **Opening Hours:** Sunday-Thursday 9:00-17:00, Friday by appointment
+### Pregnancy and Baby Massage
 
----
+Embrace the journey of motherhood with our specialized massage treatments. Our pregnancy massage offers comfort and relief, while our baby massage promotes bonding and supports your little one's development.
 
-For more treatments and details, [visit the website](https://yourwebsite.com).
+### Crystal Therapy
+
+Tap into the healing energies of crystals with our crystal massage treatment. Uri thoughtfully incorporates these natural gemstones, allowing their vibrations to harmonize with your body's energy fields.
+
+## Contact and Location
+
+Address: Kibbutz Erez
+Phone: 0507431189
+Email: uriss100@gmail.com
+Opening Hours: Sunday-Thursday 9:00-17:00, Friday by appointment
+
+Discover the rejuvenating power of Uri Shamai's treatments. Book your appointment today and embark on a transformative journey of healing and relaxation.
