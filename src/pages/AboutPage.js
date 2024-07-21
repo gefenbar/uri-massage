@@ -61,9 +61,11 @@ export default function AboutPage() {
               אני מטפל בקליניקה שלי בקיבוץ ארז וניתן לתאם טיפול במקום בימים
               א'-ו'. מוזמנים ליצור קשר וליהנות מטיפול מקצועי ומפנק!
             </p>
-            <Link className="contact-link" to="/contact">
-              דברו איתי <span className="emoji">&#128588;</span>
+            <button>
+            <Link to="/contact">
+              דברו איתי 
             </Link>
+            </button>
           </div>
         </div>
       </div>
