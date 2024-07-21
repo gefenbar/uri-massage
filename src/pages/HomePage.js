@@ -35,11 +35,11 @@ const AboutSection = () => (
           <h2>קצת עליי</h2>
           <p>
             אורי שמאי - מטפל מוסמך, בוגר המכללה לרפואה אלטרנטיבית תאילנד קוסמוי
-            ומכללת ברק.  אני מבצע מגוון טיפולים, ביניהם: טיפול בצלילים מרפאים
+            ומכללת ברק. <br/>אני מבצע מגוון טיפולים, ביניהם: טיפול בצלילים מרפאים
             (Sound Healing), עיסוי שוודי, עיסוי לנשים בהריון, עיסוי תינוקות,
             טיפול בקריסטלים ועוד.
           </p>
-          <Link className="contact-link" to="/contact">לפרטים נוספים וקביעת תור</Link>
+          <button><Link to="/contact">לפרטים נוספים וקביעת תור</Link></button>
         </div>
       </div>
     </div>
@@ -106,9 +106,10 @@ export const TreatmentsSection = ({
       <br />
       <br />
       {showLink && (
-        <Link className="more" to="/treatments">
+       <button> <Link to="/treatments">
           לטיפולים נוספים
         </Link>
+        </button>
       )}
       <br />
       <br />
