@@ -15,7 +15,7 @@ export default function SocialLinks() {
         <img src={"phone.webp"} alt="Phone" />
       </a>
       <a
-        href="https://api.whatsapp.com/send?phone=+972507431189"
+        href="https://api.whatsapp.com/send?phone=+972507431198"
         target="_blank"
         rel="noreferrer"
         className={`side-social-link`}

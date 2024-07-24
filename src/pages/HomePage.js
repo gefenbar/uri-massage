@@ -19,7 +19,11 @@ const HeroSection = () => (
       <p>מגוון טיפולים מרגיעים ומאזנים</p>
       <br />
       <button>
-        <Link to="/contact">לתיאום טיפול</Link>
+      <a 
+          href="https://api.whatsapp.com/send?phone=+972507431198&text=שלום אורי, ברצוני להזמין טיפול"
+          rel="noreferrer"
+          target="_blank"
+        >לתיאום טיפול</a>
       </button>
     </div>
   </section>
@@ -121,7 +125,7 @@ const ContactSection = () => (
   <section className="contact-section">
     <h2>יצירת קשר</h2>
     <p>כתובת: קיבוץ ארז</p>
-    <p>טלפון: 0507431189</p>
+    <p>טלפון: 0507431198</p>
     <p>אימייל: uriss100@gmail.com</p>
     <p>שעות פתיחה: א'-ה' 9:00-17:00, ו' בתאום מראש</p>
   </section>

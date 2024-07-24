@@ -59,6 +59,7 @@ p {
   border-radius: 5px;
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   z-index: 1000;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .side-social-link {
@@ -69,11 +70,14 @@ p {
   outline: 3px solid #1b175b; /* Adjust color and width */
   border-radius: 300px;
   transition: all 0.1s ease;
+  transition: all 1s ease; /* Change duration to 0.5s for slower spin */
+
 }
 
 .side-social-link:hover {
   outline: 3px solid #1b175b; /* Adjust color and width */
   border-radius: 300px;
+  transform: rotatey(180deg); 
   /* border-color: #ffc107; */
 }
 
@@ -244,13 +248,17 @@ a.navbar-logo:hover {
   color:#1b175b;
 }
 .contact-page .phone-color {
-  color: #2196f3;
+  /* color: #2196f3; */
 }
 .contact-page .email-color {
-  color: #ff2147;
+  /* color: #ff2147; */
 }
 .contact-page .facebook-color {
-  color: black;
+  /* color: black; */
+}
+
+.contact-page a{
+  color: #000;
 }
 
 .contact-page a:hover {
@@ -442,7 +450,7 @@ section {
   position: relative;
   top: 8vh;
   background-color: #f0f8ff77;
-  border-radius:  100px 100px 100px 100px;
+  border-radius:  500px;
   padding: 8% 2%;
   margin-top: 10%;
   margin-left: 15%;
@@ -680,7 +688,7 @@ color:white!important;
 
  
  .page-single-treatment {
-  margin-top: 8vh;
+  /* margin-top: 8vh; */
 margin-left:10%;
 margin-right: 10%;
   /* margin: 0 auto; */

@@ -7,7 +7,7 @@ export default function ContactPage() {
 
       <p className="some-text">לתיאום טיפול או בכל שאלה, אנא פנו אליי באמצעות:</p>
       <p>
-        <a className="phone-color" href="tel:0507431189">
+        <a className="phone-color" href="tel:0507431198">
           <img src="phone.webp"  alt="Phone Number" width="32px" height="32px" />
           050-7431-198
         </a>
