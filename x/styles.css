@@ -1407,3 +1407,9 @@ img {
     height: 40px
 }
 }
+.modal-backdrop.show {
+    display: none!important;
+}
+.modal-backdrop  {
+    position: relative;
+}
