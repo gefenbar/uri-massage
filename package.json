@@ -4,7 +4,7 @@
   "description": "Uri Shamai Massage Website",
   "main": "index.html",
   "scripts": {
-    "build": "echo 'Static site - no build required'",
+    "build": "mkdir -p build && cp -r index.html css js *.jpg *.webp build/",
     "start": "npx http-server .",
     "test": "echo 'No tests specified'"
   },
