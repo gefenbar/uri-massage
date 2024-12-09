@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אורי שמאי - טיפול בקערות טיבטיות | ריפוי קולי וצלילים מרפאים</title>
+    <meta name="description" content="חוויית ריפוי עמוקה באמצעות קערות טיבטיות. טיפולים אישיים, קבוצתיים וסדנאות לשחרור מתחים, הפחתת חרדה ושיפור איכות החיים.">
+    <meta name="keywords" content="קערות טיבטיות, ריפוי קולי, מדיטציה, שחרור מתחים, טיפול הוליסטי, ריפוי צלילים">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.urish-healing.co.il">
+    <meta property="og:title" content="אורי שמאי - טיפול בקערות טיבטיות">
+    <meta property="og:description" content="חוויית ריפוי עמוקה באמצעות קערות טיבטיות. טיפולים אישיים, קבוצתיים וסדנאות לשחרור מתחים.">
+    <meta property="og:image" content="path/to/featured-image.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.urish-healing.co.il">
+    <meta name="twitter:title" content="אורי שמאי - טיפול בקערות טיבטיות">
+    <meta name="twitter:description" content="חוויית ריפוי עמוקה באמצעות קערות טיבטיות. טיפולים אישיים, קבוצתיים וסדנאות לשחרור מתחים.">
+    <meta name="twitter:image" content="path/to/featured-image.jpg">
+
+    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Lightbox for image gallery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+   
+    <style>
+      /* Accessible Color Palette */
+body {
+    background-color: #F8F8F7 !important;  /* Light background */
+    color: #2C3E50 !important;  /* Deep charcoal for readability */
+}
+
+/* High Contrast Buttons */
+.btn {
+    background-color: #2E8B7A !important;  /* Accessible teal */
+    color: #FFFFFF !important;  /* Pure white for maximum contrast */
+    border-color: #1F5E52 !important;  /* Darker teal border */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1F5E52 !important;  /* Darker teal on hover */
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 6px rgba(31, 94, 82, 0.3);
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: #2C3E50 !important;  /* Deep charcoal */
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #2E8B7A !important;  /* Accessible teal */
+}
+
+/* Headings and Titles */
+h1, h2, h3, h4, h5, h6,
+.section-title {
+    color: #1F5E52 !important;  /* Dark teal for headings */
+    font-weight: 600;
+}
+
+.section-title::after {
+    background-color: #2E8B7A !important;  /* Accessible teal underline */
+    height: 3px;
+    width: 60px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+/* Global Button Styles */
+.btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4a8f29;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #3a6b8e;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(58, 107, 142, 0.15);
+}
+
+/* Consolidated card styles */
+.card {
+    background: #f4f7f6;
+    border: 2px solid #6b8e7c;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(107, 142, 124, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(215, 189, 226, 0.15);
+}
+
+/* Consolidated modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #f4f7f6;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 15px 25px rgba(213, 198, 176, 0.2);
+    position: relative;
+    animation: modalSlideIn 0.4s ease;
+    direction: rtl;
+}
+
+/* Consolidated grid column styles */
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.1), rgba(135, 206, 235, 0.05));
+    color: #ffffff;
+    padding: calc(1.5rem + 60px) 0 1.5rem;
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-color: #f4f7f6;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.1), rgba(135, 206, 235, 0.05));
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 1rem 0;
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: bold;
+    color: #4a8f29;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: clamp(0.9rem, 2.5vw, 1.25rem);
+    margin-bottom: 1.5rem;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    z-index: 2;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 20px rgba(215, 189, 226, 0.15);
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    max-height: 70vh;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-cta-group .btn {
+    min-width: 150px;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+}
+
+@media (min-width: 992px) {
+    .hero-section .row {
+        min-height: calc(90vh - 1.5rem * 2);
+    }
+    
+    .hero-image {
+        max-height: 80vh;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-section {
+        text-align: center;
+        padding: calc(1.5rem + 40px) 0 1rem;
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: 1rem 0;
+        margin: 0 auto;
+    }
+
+    .hero-image-wrapper {
+        margin-top: 1rem;
+        padding: 0 1rem;
+    }
+
+    .hero-image {
+        max-height: 50vh;
+    }
+
+    .hero-cta-group {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: calc(1.5rem + 20px) 0 0.5rem;
+    }
+
+    .hero-content {
+        padding: 0.5rem 0;
+    }
+
+    .hero-image {
+        max-height: 40vh;
+    }
+
+    .hero-cta-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    .hero-cta-group .btn {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
+@media (max-height: 600px) {
+    .hero-section {
+        min-height: auto;
+        padding: calc(1.5rem + 20px) 0 1rem;
+    }
+
+    .hero-image {
+        max-height: 35vh;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        margin-bottom: 1rem;
+    }
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2rem;
+    color: #4a8f29;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Testimonials Carousel */
+.testimonials-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.testimonials-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    transition: transform 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.testimonial-slide {
+    position: absolute;
+    width: 380px;
+    opacity: 0;
+    transform: translateX(0) scale(0.8);
+    transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+    pointer-events: none;
+    background: #f4f7f6;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.testimonial-slide.active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.testimonial-slide.prev {
+    opacity: 0.6;
+    transform: translateX(-100%) scale(0.7);
+    z-index: 5;
+}
+
+.testimonial-slide.next {
+    opacity: 0.6;
+    transform: translateX(100%) scale(0.7);
+    z-index: 5;
+}
+
+.testimonial-card {
+    padding: 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 80px;
+    color: rgba(139, 115, 85, 0.1);
+    z-index: 1;
+}
+
+.testimonial-card p {
+    position: relative;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4A4238;
+    z-index: 2;
+    margin-top: 30px;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: #A8C5A4 !important;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.carousel-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 20;
+    pointer-events: none;
+}
+
+.carousel-prev,
+.carousel-next {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #4a8f29;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    pointer-events: auto;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background-color: #4a8f29;
+}
+
+.carousel-prev i,
+.carousel-next i {
+    color: #4a8f29;
+    font-size: 28px;
+    transition: color 0.3s ease;
+}
+
+.carousel-prev:hover i,
+.carousel-next:hover i {
+    color: white;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background-color: #88BDBC !important;
+    width: 20px;
+    border-radius: 10px;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    background-color: #f4f7f6;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(34, 139, 34, 0.1), rgba(135, 206, 235, 0.05));
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: #4a8f29;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.hero-image-wrapper {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 15px 25px rgba(213, 198, 176, 0.2);
+    transform: perspective(1000px) rotateY(-15deg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-image:hover {
+    transform: perspective(1000px) rotateY(0);
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+    .hero-section {
+        height: auto;
+        padding: 120px 0 60px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-image-wrapper {
+        margin-top: 3rem;
+    }
+
+    .hero-image {
+        transform: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+.schedule-container {
+    background: #f4f7f6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+
+#scheduleTable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+#scheduleTable td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    transition: all 0.2s ease;
+}
+#scheduleTable th {
+    background-color: #88BDBC !important;
+    color: #F8F8F7 !important;
+    padding: 12px;
+    text-align: center;
+}
+
+
+.hour-cell {
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+
+.available-slot {
+    background-color: #e8f5e9 !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.available-slot:hover {
+    background-color: #A8C5A4 !important;
+    color: #F8F8F7 !important;
+    transform: scale(1.05);
+}
+
+.booked-slot {
+    background-color: #ffebee !important;
+}
+
+.modal-content {
+    direction: rtl;
+}
+
+.modal-header .btn-close {
+    margin: 0;
+}
+
+.selected-time-display {
+    font-size: 1.2em;
+    color: #88BDBC !important;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#adminButton {
+    padding: 10px 20px;
+    font-size: 1.1em;
+}
+
+.testimonial-card {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.schedule-container {
+    background: #f4f7f6;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.zen-image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.zen-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.zen-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.zen-image-overlay:hover {
+    opacity: 0.5 !important;
+    background-color: #4a8f29 !important;
+}
+
+.zen-overlay-content {
+    color: white;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.col-12{
+width: 45em !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-5 {
+    margin-bottom: 1.25rem;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #f4f7f6;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 0.5rem;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 15px 25px rgba(213, 198, 176, 0.2);
+}
+
+.lightbox {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+@keyframes reviewCarousel {
+    0%, 33.33% {
+        transform: translateX(0);
+    }
+    40%, 73.33% {
+        transform: translateX(-33.33%);
+    }
+    80%, 100% {
+        transform: translateX(-66.66%);
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 1.5rem 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Adjust for fixed navbar */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    z-index: -1;
+    /* background-image: 
+        linear-gradient(135deg, #228b22 25%, transparent 25%),
+        linear-gradient(225deg, #228b22 25%, transparent 25%); */
+    background-size: 50px 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #4a8f29;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    padding: 3rem 1rem;
+    margin: 1rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('hero.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: #f4f7f6; /* Fallback background */
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #F4EBD0 !important;
+    color: #ABA29A !important;
+}
+footer .container p{
+    margin-bottom: 0!important;
+}
+footer p {
+    font-size: 0.9rem;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    color: #3a6b8e;
+}
+
+.section-title {
+    position: relative;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #4a8f29;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #4a8f29;
+}
+
+.navbar {
+    background-color: #4a8f29 !important;
+    border-bottom: 2px solid #4a8f29;
+    box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link {
+    color: #3a6b8e !important;
+    position: relative;
+    transition: all 0.2s ease;
+}
+a.nav-link{
+    padding: 0!important;   
+    text-decoration: unset !important;
+    color: #4a8f29 !important;
+    line-height: 32px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4a8f29;
+    transition: width 0.2s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+.hero-section {
+    background: linear-gradient(135deg, #4a8f29, #3a6b8e );
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.benefit-item i {
+    color: #88BDBC !important;
+}
+
+#gallery .img-fluid {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: grayscale(20%);
+}
+
+#gallery .img-fluid:hover {
+    transform: scale(1.05);
+    filter: grayscale(0);
+    box-shadow: 0 10px 20px rgba(215, 189, 226, 0.15);
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(215, 189, 226, 0.15);
+}
+
+.testimonials-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-navigation {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #4a8f29;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.carousel-indicator.active {
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+.schedule-container {
+    background-color: #f4f7f6;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
+    padding: 1.5rem;
+}
+
+
+
+
+
+
+
+.available-slot {
+    background-color: #e8f5e9;
+    cursor: pointer;
+}
+
+.available-slot:hover {
+    background-color: #A8C5A4 !important;
+    color: #F8F8F7 !important;
+}
+
+.booked-slot {
+    background-color: #ffebee;
+    cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+
+    .section {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-indicator {
+        width: 8px;
+        height: 8px;
+    }
+
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.8rem; }
+
+    .btn-primary {
+        padding: 0.5rem;
+    }
+}
+
+.text-primary { 
+    color: #88BDBC !important;
+}
+
+.btn-primary {
+    background-color: #88BDBC !important;
+    border-color: #88BDBC !important;
+    font-family: 'Lato', sans-serif;
+    transition: 
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #A8C5A4 !important;
+    border-color: #A8C5A4 !important;
+    transform: translateY(-3px);
+}
+
+.navbar {
+    background-color: #88BDBC !important;
+    box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
+}
+.navbar-brand {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+}
+.nav-link {
+    color: white;
+    transition: all 0.2s ease;
+}
+.nav-link:hover {
+    color: #88BDBC !important;
+}
+
+.hero h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.25rem;
+}
+
+.btn-primary {
+    background-color: #88BDBC !important;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-primary:hover {
+    background-color: #A8C5A4 !important;
+    box-shadow: 0 10px 20px rgba(215, 189, 226, 0.15);
+}
+
+.testimonials-track {
+    display: flex;
+    /* overflow-x: auto; */
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+}
+
+.contact-info {
+    background: #F4EBD0 !important;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
+}
+.contact-info h2 {
+    font-family: 'Lato', sans-serif;
+    color: #88BDBC !important;
+    margin-bottom: 0.5rem;
+}
+.contact-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #ABA29A !important;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 0.5rem;
+}
+
+.section {
+    padding: 1.5rem 0;
+    background-color: #f4f7f6;
+}
+.card {
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1;
+}
+
+@media (max-width: 480px) {
+
+    #appointments .table {
+        font-size: 0.6rem;
+        width: 60%;
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #appointments .table th,
+    #appointments .table td {
+        padding: 0.2rem;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    text-align: center;
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+        circle at center, 
+        rgba(107, 91, 149, 0.05) 0%, 
+        transparent 70%
+    );
+    z-index: -1;
+    opacity: 0.5;
+}
+
+section:hover {
+    /* transform: translateY(-10px); */
+    box-shadow: 0 10px 20px rgba(215, 189, 226, 0.15);
+}
+
+/* Base image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Section-specific image styles */
+#home img,
+#science img,
+#about img,
+#services img,
+#testimonials img {
+    max-height: 500px;
+    margin: 15px auto;
+}
+#home img{height: 200px;}
+
+#home img:hover,
+#science img:hover,
+#about img:hover,
+#services img:hover,
+#testimonials img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(215, 189, 226, 0.15);
+}
+
+/* Image gallery */
+
+.navbar-nav .logo-item {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav .logo-item .navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-nav .logo-item .navbar-logo {
+    max-height: 45px;
+    width: auto;
+    transition: all 0.3s ease;
+    filter: grayscale(20%) contrast(110%);
+}
+
+.navbar-nav .logo-item .navbar-logo:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%) contrast(100%);
+}
+.navbar-nav{
+    padding: 0.2em!important;    
+    box-shadow: none!important;}
+
+    .nav-item{padding: 10px !important;}
+    .btn-outline-dark{color: #8C7B8A !important;
+    border-color: #8C7B8A !important;}
+   
+    .btn-outline-dark{color: #8C7B8A !important;
+    border-color: #8C7B8A !important;}
+    .btn-outline-dark:hover{ background-color: #fff!important;
+    }
+
+/* Mobile Responsiveness - Max Width 768px */
+@media screen and (max-width: 768px) {
+    /* Typography Adjustments */
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    /* Layout Adjustments */
+    .container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-6, .col-lg-4 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Navigation */
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-brand {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Forms */
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Testimonials */
+    .testimonials-track {
+        flex-direction: column;
+    }
+
+    .testimonial-slide {
+        width: 75%;
+        margin-bottom: 15px;
+    }
+
+    /* Modal */
+    .modal-dialog {
+        margin: 1.75rem auto;
+        max-width: 95%;
+    }
+
+    /* Spacing */
+    .section-padding {
+        padding: 30px 15px;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .carousel-prev,
+.carousel-next {
+    width: 40px;
+    height: 40px
+}
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top">
+        <div class="container-fluid px-4">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item logo-item">
+                        <a class="navbar-brand" href="#">
+                            <img src="logo.webp" alt="אורי שמאי - לוגו" class="navbar-logo">
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#home">בית</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">אודות</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">שירותים</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">גלריה</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">המלצות</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#appointments">קביעת תור</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">צור קשר</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">מסע של ריפוי עמוק</h1>
+                    <p class="hero-subtitle">חוויה מרפאת של קערות טיבטיות - שחרור, מנוחה והתחדשות</p>
+                    <div class="hero-cta-group">
+                        <a href="#appointments" class="btn btn-primary">קבע תור עכשיו</a>
+                        <a href="#about" class="btn btn-outline-dark">גלה עוד</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image-wrapper">
+                    <img src="bowls.jpg" alt="קערות טיבטיות - חוויית ריפוי" class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scientific Background Section -->
+    <section id="science" class="">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">המדע מאחורי הריפוי הקולי</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="scientific-content">
+                        <h3>איך צלילים מרפאים?</h3>
+                        <p>קערות טיבטיות משחררות תדרים קוליים המשפיעים ישירות על מערכת העצבים. מחקרים מראים כי הצלילים יכולים:</p>
+                        <ul>
+                            <li>להפחית רמות קורטיזול (הורמון הלחץ)</li>
+                            <li>לשפר פעילות גלי מוח אלפא וטטא</li>
+                            <li>לעורר תגובה של הרפיה עמוקה</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="zen-image-container">
+                        <img src="soundHealingUri.webp" 
+                             alt="גלי מוח וריפוי קולי" 
+                             class="zen-image">
+                        <div class="zen-image-overlay">
+                            <div class="zen-overlay-content">
+                                <h4>גלי מוח וריפוי קולי</h4>
+                                <p>חוויה מרפאת</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="zen-image-container">
+                        <img src="bowls.jpg" 
+                             alt="טיפול בקערות טיבטיות" 
+                             class="zen-image animate__animated animate__fadeInRight">
+                        <div class="zen-image-overlay">
+                            <div class="zen-overlay-content">
+                                <h4>טיפול בקערות טיבטיות</h4>
+                                <p>חוויה מרגיעה</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                    <h2 class="section-title">על הטיפול בקערות טיבטיות</h2>
+                    <p>הקערות הטיבטיות הן כלי ריפוי עתיק בן מאות שנים, המשמש לטיפול הוליסטי המשלב צלילים וויברציות מרפאות.</p>
+                    <p>הטיפול מסייע להפחתת מתחים, הרגעת מערכת העצבים, שיפור מצב הרוח וטיפול בבעיות פיזיות ונפשיות.</p>
+                    <div class="benefits mt-4">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span>הפחתת חרדה ודיכאון</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span>שיפור איכות השינה</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span>איזון אנרגטי וריפוי עמוק</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">גלריית תמונות</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="zen-image-container">
+                        <a href="bowls.jpg" 
+                           data-lightbox="gallery" 
+                           data-title="מדיטציה עם קערות טיבטיות">
+                            <img src="bowls.jpg" 
+                                 alt="מדיטציה" 
+                                 class="zen-image">
+                            <div class="zen-image-overlay">
+                                <div class="zen-overlay-content">
+                                    <h4>מדיטציה</h4>
+                                    <p>חוויה מרגיעה</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="zen-image-container">
+                        <a href="bowls.jpg" 
+                           data-lightbox="gallery" 
+                           data-title="טיפול בקערות טיבטיות">
+                            <img src="bowls.jpg" 
+                                 alt="טיפול קולי" 
+                                 class="zen-image">
+                            <div class="zen-image-overlay">
+                                <div class="zen-overlay-content">
+                                    <h4>טיפול קולי</h4>
+                                    <p>חוויה מרפאת</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="zen-image-container">
+                        <a href="https://img.freepik.com/free-photo/tibetan-bowls-relaxation_23-2149101695.jpg" 
+                           data-lightbox="gallery" 
+                           data-title="הרפיה עם קערות טיבטיות">
+                            <img src="bowls.jpg" 
+                                 alt="הרפיה" 
+                                 class="zen-image">
+                            <div class="zen-image-overlay">
+                                <div class="zen-overlay-content">
+                                    <h4>הרפיה</h4>
+                                    <p>חוויה מרגיעה</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">המלצות מטופלים</h2>
+            <div class="testimonials-carousel">
+                <div class="testimonials-track">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-card">
+                            <p>"הטיפול בקערות טיבטיות של אורי שינה לי את החיים. הרגשתי שחרור עמוק ורוגע שלא הכרתי קודם."</p>
+                            <div class="testimonial-author mt-3">
+                                <strong>- שרה כהן</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p>"מדהים איך צלילי הקערות הצליחו להרגיע אותי ולהוריד מתחים שנצברו אצלי שנים."</p>
+                            <div class="testimonial-author mt-3">
+                                <strong>- דוד לוי</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p>"חוויה מרגשת ומרפאת. אורי מקצועי ובעל יכולת להעביר חוויה שלמה של ריפוי."</p>
+                            <div class="testimonial-author mt-3">
+                                <strong>- מיכל רוזנברג</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p>"לא האמנתי שקערות טיבטיות יכולות להשפיע כל כך עמוק. הטיפול של אורי שחרר ממני שכבות של מתח וכאב."</p>
+                            <div class="testimonial-author mt-3">
+                                <strong>- אלון גולן</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p>"אחרי שנים של חיפוש, מצאתי בטיפול של אורי את השלווה והריפוי שחיפשתי. המלצה חמה!"</p>
+                            <div class="testimonial-author mt-3">
+                                <strong>- רחל אברהם</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-card">
+                            <p>"הקערות הטיבטיות של אורי הן יותר מטיפול - הן חוויה רוחנית מרוממת שנגעה בנשמה שלי."</p>
+                            <div class="testimonial-author mt-3">
+                                <strong>- יוסי כהן</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="carousel-navigation">
+                    <button class="carousel-prev">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="carousel-next">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                </div>
+    
+                <div class="carousel-indicators">
+                    <div class="carousel-indicator active" data-slide="0"></div>
+                    <div class="carousel-indicator" data-slide="1"></div>
+                    <div class="carousel-indicator" data-slide="2"></div>
+                    <div class="carousel-indicator" data-slide="3"></div>
+                    <div class="carousel-indicator" data-slide="4"></div>
+                    <div class="carousel-indicator" data-slide="5"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointments Section -->
+    <section id="appointments" class="py-5 bg-light" dir="rtl">
+        <div class="container">
+            <h2 class="text-center mb-4">לוח זמנים לקביעת תור</h2>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="schedule-container">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover text-center" id="scheduleTable">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>שעה</th>
+                                        <th>ראשון</th>
+                                        <th>שני</th>
+                                        <th>שלישי</th>
+                                        <th>רביעי</th>
+                                        <th>חמישי</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="scheduleTableBody">
+                                    <!-- Schedule will be dynamically populated here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Modal -->
+            <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="bookingModalLabel">הזמנת תור</h5>
+                            <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="selected-time-display mb-3"></p>
+                            <form id="bookingForm" class="text-end">
+                                <input type="hidden" id="selectedTimeSlot" name="timeSlot">
+                                <div class="mb-3">
+                                    <label for="clientName" class="form-label">שם מלא</label>
+                                    <input type="text" class="form-control text-end" id="clientName" required 
+                                        placeholder="הכנס את שמך המלא">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="clientPhone" class="form-label">מספר טלפון</label>
+                                    <input type="tel" class="form-control text-end" id="clientPhone" required 
+                                        placeholder="הכנס מספר טלפון">
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">שלח בקשה לתור</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Panel Modal -->
+            <div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="adminModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="adminModalLabel">ניהול תורים</h5>
+                            <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h6 class="mb-3">בקשות תורים ממתינות</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>יום</th>
+                                            <th>שעה</th>
+                                            <th>שם</th>
+                                            <th>טלפון</th>
+                                            <th>פעולות</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="pendingBookingsBody">
+                                        <!-- Pending bookings will be populated here -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Button (only visible to admin) -->
+            <div class="text-center mt-4">
+                <button id="adminButton" class="btn btn-outline-primary" >
+                    <i class="fas fa-cog me-2"></i> ניהול תורים
+                </button>
+            </div>
+        </div>
+
+    
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">צור קשר</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info p-4 shadow-sm">
+                        <h3>פרטי התקשרות</h3>
+                        <div class="contact-method mb-3">
+                            <i class="fas fa-phone text-primary"></i>
+                            <span>050-7431-198</span>
+                        </div>
+                        <div class="contact-method mb-3">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>uriss100@gmail.com</span>
+                        </div>
+                        <div class="contact-method mb-3">
+                            <i class="fab fa-facebook text-primary"></i>
+                            <span>אורי שמאי - מטפל במגע</span>
+                        </div>
+                        
+                        <div class="hours-of-operation mt-4">
+                            <h4>שעות פעילות</h4>
+                            <p>א'-ה': 9:00-17:00</p>
+                            <p>ו': בתאום מראש</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3390.8876411466897!2d34.5661373!3d31.5661666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15029f6b5b418bef%3A0x92c8f4c2fb8b7a31!2z15DXqNeW!5e0!3m2!1siw!2sil!4v1673843298440!5m2!1siw!2sil" 
+                            width="100%" 
+                            height="450" 
+                            style="border:0; border-radius: 10px;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 אורי שמאי - טיפול בקערות טיבטיות. כל הזכויות שמורות.</p>
+        </div>
+    </footer>
+
+    <!-- Modals and Additional Scripts -->
+    <div class="modal fade" id="heroImageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">קערות טיבטיות - כלי ריפוי עתיק</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="hero.webp" 
+                         alt="קערות טיבטיות" 
+                         class="img-fluid">
+                    <p class="mt-3">קערות טיבטיות הן כלי ריפוי עתיק המשמש לטיפול הוליסטי, המשלב צלילים וויברציות מרפאות.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase Authentication and Realtime Database -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+
+    <!-- Fullcalendar for Interactive Scheduling -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.js'></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
