@@ -1,89 +1,158 @@
-// Smooth Scrolling
-$('.scroll-link').on('click', function(event) {
-    if (this.hash !== '') {
+// Hero Section Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const testimonialsCarousel = new TestimonialsCarousel('#testimonials .testimonials-carousel');
+
+     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const sections = Array.from(navLinks).map(link => {
+        const targetId = link.getAttribute('href');
+        return document.querySelector(targetId);
+    });
+
+    // Function to handle click event and add active class
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            // Prevent default anchor behavior
+            e.preventDefault();
+
+            // Close the navbar using Bootstrap's collapse method
+            const navbarCollapse = document.getElementById('navbarNav');
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                } else {
+                    new bootstrap.Collapse(navbarCollapse, { toggle: false }).hide();
+                }
+            }
+
+            // Get the target section
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+
+            // Scroll to the section smoothly
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                });
+            }
+
+            // Update the active class
+            navLinks.forEach(link => link.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Intersection Observer to detect the visible section and update active link
+    const observerOptions = {
+        root: null, // Use the viewport as the root
+        rootMargin: '0px',
+        threshold: 0.6, // Trigger when 60% of the section is visible
+    };
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Find the corresponding nav link for the visible section
+                const sectionId = `#${entry.target.id}`;
+                navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === sectionId);
+                });
+            }
+        });
+    }, observerOptions);
+
+    // Observe all sections
+    sections.forEach(section => {
+        if (section) observer.observe(section);
+    });
+
+$('.hero-title').addClass('animate__animated animate__fadeInDown');
+$('.hero-subtitle').addClass('animate__animated animate__fadeInUp');
+$('.hero-cta-group a').addClass('animate__animated animate__zoomIn');
+
+
+const appointmentForm = document.getElementById('appointmentForm');
+const appointmentConfirmation = document.getElementById('appointmentConfirmation');
+const confirmationDetails = document.getElementById('confirmationDetails');
+
+// Validate form on submit
+if (appointmentForm) {
+    appointmentForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        const hash = this.hash;
-        $('html, body').animate({
-            scrollTop: $(hash).offset().top
-        }, 800);
-    }
-});
+        event.stopPropagation();
 
-// Scroll Reveal Animations
-function checkReveal() {
-    $('.reveal').each(function() {
-        const windowHeight = $(window).height();
-        const elementTop = $(this).offset().top;
-        const scrollPosition = $(window).scrollTop();
+        if (appointmentForm.checkValidity()) {
+            // Collect form data
+            const formData = {
+                name: document.getElementById('clientName').value,
+                email: document.getElementById('clientEmail').value,
+                date: document.getElementById('appointmentDate').value,
+                time: document.getElementById('appointmentTime').value,
+                service: document.getElementById('serviceType').value,
+                message: document.getElementById('clientMessage').value,
+                id: Date.now() // Unique identifier
+            };
 
-        if (scrollPosition > elementTop - windowHeight + 100) {
-            $(this).addClass('active');
+            // Save appointment to local storage
+            saveAppointment(formData);
+
+            // Show confirmation
+            showConfirmation(formData);
+
+            // Reset form
+            appointmentForm.reset();
+            appointmentForm.classList.remove('was-validated');
+        } else {
+            appointmentForm.classList.add('was-validated');
         }
     });
 }
 
-$(window).scroll(checkReveal);
-checkReveal(); // Initial check
+// Function to save appointment to local storage
+function saveAppointment(appointment) {
+    let appointments = JSON.parse(localStorage.getItem('uriShamaiAppointments')) || [];
+    appointments.push(appointment);
+    localStorage.setItem('uriShamaiAppointments', JSON.stringify(appointments));
+}
 
-// Hero Title Animation
-$('.animated-title').addClass('active');
-
-// Hero Section Animation
-$(document).ready(function() {
-    $('.hero-title').addClass('animate__animated animate__fadeInDown');
-    $('.hero-subtitle').addClass('animate__animated animate__fadeInUp');
-    $('.hero-cta-group a').addClass('animate__animated animate__zoomIn');
-});
-
-// Form Submission (Note: Replace with actual form handling)
-$('#contactForm').on('submit', function(e) {
-    e.preventDefault();
-    alert('תודה על פנייתך! נחזור אליך בהקדם.');
-});
-
-// Service Card Hover Effects
-$('.service-card').hover(
-    function() {
-        $(this).addClass('shadow-lg');
-    },
-    function() {
-        $(this).removeClass('shadow-lg');
-    }
-);
-
-// Contact Method Interactions
-$('.contact-method').on('click', function() {
-    const link = $(this).find('.contact-link');
-    if (link.length) {
-        const href = link.attr('href');
-        if (href.startsWith('tel:') || href.startsWith('mailto:')) {
-            window.location.href = href;
-        } else {
-            window.open(href, '_blank');
+// Function to show confirmation
+function showConfirmation(appointment) {
+    if (confirmationDetails) {
+        confirmationDetails.innerHTML = `
+            <strong>Name:</strong> ${appointment.name}<br>
+            <strong>Date:</strong> ${appointment.date}<br>
+            <strong>Time:</strong> ${appointment.time}<br>
+            <strong>Service:</strong> ${appointment.service}
+        `;
+        if (appointmentConfirmation) {
+            appointmentConfirmation.style.display = 'block';
         }
-    }
-});
 
-// Tooltip for contact methods
-$('.contact-method').each(function() {
-    const type = $(this).data('type');
-    let tooltipText = '';
-    switch(type) {
-        case 'phone':
-            tooltipText = 'לחץ להתקשר';
-            break;
-        case 'email':
-            tooltipText = 'לחץ לשלוח אימייל';
-            break;
-        case 'facebook':
-            tooltipText = 'לחץ לעבור לפייסבוק';
-            break;
+        // Hide confirmation after 5 seconds
+        setTimeout(() => {
+            if (appointmentConfirmation) {
+                appointmentConfirmation.style.display = 'none';
+            }
+        }, 5000);
     }
-    $(this).attr('title', tooltipText);
-});
+}
+
+// Optional: Add method to view and manage appointments
+window.viewAppointments = function() {
+    const appointments = JSON.parse(localStorage.getItem('uriShamaiAppointments')) || [];
+    console.table(appointments);
+    return appointments;
+};
+
+// Optional: Add method to clear all appointments
+window.clearAppointments = function() {
+    localStorage.removeItem('uriShamaiAppointments');
+    console.log('All appointments cleared');
+};
+
 
 // Firebase and Scheduling System
-document.addEventListener('DOMContentLoaded', function() {
     // Firebase Configuration (Replace with your actual Firebase config)
     const firebaseConfig = {
         apiKey: "YOUR_API_KEY",
@@ -277,92 +346,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Appointment Booking System
-document.addEventListener('DOMContentLoaded', function() {
-    const appointmentForm = document.getElementById('appointmentForm');
-    const appointmentConfirmation = document.getElementById('appointmentConfirmation');
-    const confirmationDetails = document.getElementById('confirmationDetails');
 
-    // Validate form on submit
-    if (appointmentForm) {
-        appointmentForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            event.stopPropagation();
 
-            if (appointmentForm.checkValidity()) {
-                // Collect form data
-                const formData = {
-                    name: document.getElementById('clientName').value,
-                    email: document.getElementById('clientEmail').value,
-                    date: document.getElementById('appointmentDate').value,
-                    time: document.getElementById('appointmentTime').value,
-                    service: document.getElementById('serviceType').value,
-                    message: document.getElementById('clientMessage').value,
-                    id: Date.now() // Unique identifier
-                };
 
-                // Save appointment to local storage
-                saveAppointment(formData);
-
-                // Show confirmation
-                showConfirmation(formData);
-
-                // Reset form
-                appointmentForm.reset();
-                appointmentForm.classList.remove('was-validated');
-            } else {
-                appointmentForm.classList.add('was-validated');
-            }
-        });
+// Smooth Scrolling
+$('.scroll-link').on('click', function(event) {
+    if (this.hash !== '') {
+        event.preventDefault();
+        const hash = this.hash;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800);
     }
-
-    // Function to save appointment to local storage
-    function saveAppointment(appointment) {
-        let appointments = JSON.parse(localStorage.getItem('uriShamaiAppointments')) || [];
-        appointments.push(appointment);
-        localStorage.setItem('uriShamaiAppointments', JSON.stringify(appointments));
-    }
-
-    // Function to show confirmation
-    function showConfirmation(appointment) {
-        if (confirmationDetails) {
-            confirmationDetails.innerHTML = `
-                <strong>Name:</strong> ${appointment.name}<br>
-                <strong>Date:</strong> ${appointment.date}<br>
-                <strong>Time:</strong> ${appointment.time}<br>
-                <strong>Service:</strong> ${appointment.service}
-            `;
-            if (appointmentConfirmation) {
-                appointmentConfirmation.style.display = 'block';
-            }
-
-            // Hide confirmation after 5 seconds
-            setTimeout(() => {
-                if (appointmentConfirmation) {
-                    appointmentConfirmation.style.display = 'none';
-                }
-            }, 5000);
-        }
-    }
-
-    // Optional: Add method to view and manage appointments
-    window.viewAppointments = function() {
-        const appointments = JSON.parse(localStorage.getItem('uriShamaiAppointments')) || [];
-        console.table(appointments);
-        return appointments;
-    };
-
-    // Optional: Add method to clear all appointments
-    window.clearAppointments = function() {
-        localStorage.removeItem('uriShamaiAppointments');
-        console.log('All appointments cleared');
-    };
 });
 
-// Global variables and functions for the entire site
-document.addEventListener('DOMContentLoaded', function() {
-    // Your existing global site code here
-});
+
+
 
 // Scheduling System
 const SchedulingSystem = {
@@ -505,12 +504,12 @@ const SchedulingSystem = {
                     <td>${booking.hour}</td>
                     <td>${booking.name}</td>
                     <td>${booking.phone}</td>
-                    <td>
+                    <td class="accept-reject-buttons">
                         <button class="btn btn-sm btn-success ms-1" onclick="SchedulingSystem.approveBooking(${index})">
-                            <i class="fas fa-check"></i> אישור
+                            <i class="fas fa-check"></i>
                         </button>
                         <button class="btn btn-sm btn-danger" onclick="SchedulingSystem.rejectBooking(${index})">
-                            <i class="fas fa-times"></i> דחייה
+                            <i class="fas fa-times"></i>
                         </button>
                     </td>
                 `;
@@ -796,7 +795,73 @@ class TestimonialsCarousel {
     }
 }
 
-// Initialize the carousel when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    const testimonialsCarousel = new TestimonialsCarousel('#testimonials .testimonials-carousel');
+
+
+// Scroll Reveal Animations
+function checkReveal() {
+    $('.reveal').each(function() {
+        const windowHeight = $(window).height();
+        const elementTop = $(this).offset().top;
+        const scrollPosition = $(window).scrollTop();
+
+        if (scrollPosition > elementTop - windowHeight + 100) {
+            $(this).addClass('active');
+        }
+    });
+}
+
+$(window).scroll(checkReveal);
+checkReveal(); // Initial check
+
+// Hero Title Animation
+$('.animated-title').addClass('active');
+
+
+
+// Form Submission (Note: Replace with actual form handling)
+$('#contactForm').on('submit', function(e) {
+    e.preventDefault();
+    alert('תודה על פנייתך! נחזור אליך בהקדם.');
 });
+
+// Service Card Hover Effects
+$('.service-card').hover(
+    function() {
+        $(this).addClass('shadow-lg');
+    },
+    function() {
+        $(this).removeClass('shadow-lg');
+    }
+);
+
+// Contact Method Interactions
+$('.contact-method').on('click', function() {
+    const link = $(this).find('.contact-link');
+    if (link.length) {
+        const href = link.attr('href');
+        if (href.startsWith('tel:') || href.startsWith('mailto:')) {
+            window.location.href = href;
+        } else {
+            window.open(href, '_blank');
+        }
+    }
+});
+
+// Tooltip for contact methods
+$('.contact-method').each(function() {
+    const type = $(this).data('type');
+    let tooltipText = '';
+    switch(type) {
+        case 'phone':
+            tooltipText = 'לחץ להתקשר';
+            break;
+        case 'email':
+            tooltipText = 'לחץ לשלוח אימייל';
+            break;
+        case 'facebook':
+            tooltipText = 'לחץ לעבור לפייסבוק';
+            break;
+    }
+    $(this).attr('title', tooltipText);
+});
+
