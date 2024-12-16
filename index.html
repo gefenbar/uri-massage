@@ -33,32 +33,19 @@
       /* Accessible Color Palette */
 
 
-/* High Contrast Buttons */
-.btn {
-    background-color: #2E8B7A !important;  /* Accessible teal */
-    color: #FFFFFF !important;  /* Pure white for maximum contrast */
-    border-color: #1F5E52 !important;  /* Darker teal border */
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #1F5E52 !important;  /* Darker teal on hover */
-    color: #FFFFFF !important;
-    box-shadow: 0 4px 6px rgba(31, 94, 82, 0.3);
-}
 
 /* Navbar Links */
 .navbar-nav .nav-link {
-    color: #1e57af !important;  /* Deep charcoal */
+    color: #1f58b1 !important;  /* Deep charcoal */
     /* transition: color 0.3s ease; */
 }
 
 
 
 /* Headings and Titles */
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3,  h5, h6,
 .section-title {
-    color: #1e57af !important;  /* Dark teal for headings */
+    color: #1f58b1 !important;  /* Dark teal for headings */
     font-weight: 600;
 }
 
@@ -70,9 +57,8 @@ h1, h2, h3, h4, h5, h6,
     transform: translateX(-50%);
     width: 100px;
     height: 4px;
-    background-color: #558e01;
+    background-color: #568e01;
 }
-
 
 /* Global Button Styles */
 .btn {
@@ -85,13 +71,17 @@ h1, h2, h3, h4, h5, h6,
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
     color: #ffffff;
-    background-color: #558e01;
+    background-color: #568e01;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
+
 }
 
+
+
 .btn:hover {
-    background-color: #3a6b8e;
+    background-color: #65a503!important;
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(58, 107, 142, 0.15);
 }
@@ -143,7 +133,7 @@ h1, h2, h3, h4, h5, h6,
 .hero-title {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight: bold;
-    color: #558e01;
+    color: #568e01;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
@@ -178,7 +168,7 @@ h1, h2, h3, h4, h5, h6,
    
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .hero-section {
         text-align: center;
         padding: calc(1.5rem + 40px) 0 1rem;
@@ -189,6 +179,11 @@ h1, h2, h3, h4, h5, h6,
         padding: 1rem 0;
         margin: 0 auto;
     }
+    .row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
 
 
    
@@ -239,7 +234,7 @@ h1, h2, h3, h4, h5, h6,
 /* Section Titles */
 .section-title {
     font-size: 2rem;
-    color: #558e01;
+    color: #568e01;
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -326,7 +321,7 @@ h1, h2, h3, h4, h5, h6,
 
 .testimonial-author {
     font-weight: 600;
-    color: #1e57af !important;
+    color: #1f58b1 !important;
     margin-top: 20px;
     position: relative;
     z-index: 2;
@@ -346,7 +341,7 @@ h1, h2, h3, h4, h5, h6,
 .carousel-prev,
 .carousel-next {
     background-color: rgba(255, 255, 255, 0.9);
-    border: 2px solid #558e01;
+    border: 2px solid #568e01;
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -361,12 +356,12 @@ h1, h2, h3, h4, h5, h6,
 
 .carousel-prev:hover,
 .carousel-next:hover {
-    background-color: #558e01;
+    background-color: #568e01;
 }
 
 .carousel-prev i,
 .carousel-next i {
-    color: #558e01;
+    color: #568e01;
     font-size: 28px;
     transition: color 0.3s ease;
 }
@@ -393,7 +388,7 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .carousel-indicator.active {
-    background-color: #88BDBC !important;
+    background-color: #568e01 !important;
     width: 20px;
     border-radius: 10px;
 }
@@ -427,7 +422,7 @@ h1, h2, h3, h4, h5, h6,
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    color: #558e01;
+    color: #568e01;
 }
 
 .hero-subtitle {
@@ -494,7 +489,7 @@ h1, h2, h3, h4, h5, h6,
     transition: all 0.2s ease;
 }
 #scheduleTable th {
-    background-color: #88BDBC !important;
+    background-color: #568e01 !important;
     color: #F8F8F7 !important;
     padding: 12px;
     text-align: center;
@@ -532,7 +527,7 @@ h1, h2, h3, h4, h5, h6,
 
 .selected-time-display {
     font-size: 1.2em;
-    color: #88BDBC !important;
+    color: #568e01 !important;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -588,7 +583,7 @@ h1, h2, h3, h4, h5, h6,
 
 .zen-image-overlay:hover {
     opacity: 0.9 !important;
-    background-color: #88BDBC !important;
+    background-color: #568e01 !important;
 }
 
 .zen-overlay-content {
@@ -751,8 +746,8 @@ nav ul {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #F4EBD0 !important;
-    color: #ABA29A !important;
+    background-color: #1f58b1 !important;
+    color: white;
 }
 footer .container p{
     margin-bottom: 0!important;
@@ -772,20 +767,19 @@ footer p {
 h1, h2, h3, h4, h5, h6, p, strong{
     font-family: 'Lato', sans-serif;
     font-weight: 500;
-    color: #3a6b8e;
 }
 
 .section-title {
     position: relative;
     text-align: center;
     margin-bottom: 1.5rem;
-    color: #558e01;
+    color: #568e01;
 }
 
 
 
 .navbar {
-    border-bottom: 2px solid #1e57af;
+    border-bottom: 2px solid #1f58b1;
     box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
     transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -798,7 +792,7 @@ h1, h2, h3, h4, h5, h6, p, strong{
 a.nav-link{
     padding: 0!important;   
     text-decoration: unset !important;
-    /* color: #558e01 !important; */
+    /* color: #568e01 !important; */
     line-height: 32px;
 }
 
@@ -809,7 +803,7 @@ a.nav-link{
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #1e57af!important;
+    background-color: #1f58b1!important;
     transition: width 0.5s ease;
 }
 
@@ -840,7 +834,7 @@ a.nav-link{
 }
 
 .benefit-item i {
-    color: #88BDBC !important;
+    color: #568e01 !important;
 }
 
 #gallery .img-fluid {
@@ -891,7 +885,7 @@ a.nav-link{
 .carousel-indicator {
     width: 10px;
     height: 10px;
-    background-color: #558e01;
+    background-color: #568e01;
     border-radius: 50%;
     margin: 0 0.5rem;
     cursor: pointer;
@@ -954,12 +948,12 @@ a.nav-link{
 }
 
 .text-primary { 
-    color: #88BDBC !important;
+    color: #568e01 !important;
 }
 
 .btn-primary {
-    background-color: #88BDBC !important;
-    border-color: #88BDBC !important;
+    background-color: #568e01 !important;
+    border-color: #568e01 !important;
     font-family: 'Lato', sans-serif;
     transition: 
         background-color 0.2s ease,
@@ -973,7 +967,7 @@ a.nav-link{
 }
 
 .navbar {
-    /* background-color: #88BDBC !important; */
+    /* background-color: #568e01 !important; */
     box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
 }
 /* .navbar-brand {
@@ -997,7 +991,7 @@ a.nav-link{
 }
 
 .btn-primary {
-    background-color: #88BDBC !important;
+    background-color: #568e01 !important;
     border: none;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
@@ -1023,7 +1017,7 @@ a.nav-link{
 }
 .contact-info h2 {
     font-family: 'Lato', sans-serif;
-    color: #88BDBC !important;
+    color: #568e01 !important;
     margin-bottom: 0.5rem;
 }
 .contact-info p {
@@ -1033,7 +1027,7 @@ a.nav-link{
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 92%;
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 0.5rem;
@@ -1174,6 +1168,7 @@ img {
     .nav-item{padding: 10px !important;}
 
 
+    
 /* Mobile Responsiveness - Max Width 768px */
 @media screen and (max-width: 768px) {
     /* Typography Adjustments */
@@ -1199,10 +1194,7 @@ img {
         width: 100%;
     }
 
-    .row {
-        flex-direction: column;
-    }
-
+   
     .col-md-6, .col-lg-4 {
         width: 100%;
         margin-bottom: 15px;
@@ -1231,11 +1223,7 @@ img {
         margin-bottom: 10px;
     }
 
-    .btn {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
+ 
 
     /* Testimonials */
     .testimonials-track {
@@ -1291,6 +1279,8 @@ i.fas.fa-times, i.fas.fa-check {
     width: 30px;
 }
 .table-responsive {    overflow-x: hidden;}
+.contact-info.p-4.shadow-sm{height: 100%;}
+
     </style>
 </head>
 <body>
@@ -1336,7 +1326,7 @@ i.fas.fa-times, i.fas.fa-check {
             <div class="row align-items-center justify-content-between">
                 <div class="hero-content">
                     <h1 class="hero-title">מסע של ריפוי עמוק</h1>
-                    <p class="hero-subtitle">חוויה מרפאת של קערות טיבטיות - שחרור, מנוחה והתחדשות</p>
+                    <p class="hero-subtitle">חוויה מרפאת של קערות טיבטיות<br>שחרור, מנוחה והתחדשות</p>
                     <div class="hero-cta-group">
                         <a href="#appointments" class="btn btn-outline-dark">קבע תור עכשיו</a>
                         <a href="#about" class="btn btn-outline-dark">גלה עוד</a>
@@ -1661,7 +1651,7 @@ i.fas.fa-times, i.fas.fa-check {
         </div>
     </section>
 
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="text-center py-3">
         <div class="container">
             <p>&copy; 2024 אורי שמאי - טיפול בקערות טיבטיות. כל הזכויות שמורות.</p>
         </div>
