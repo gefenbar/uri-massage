@@ -164,7 +164,7 @@ const formData = {
   
   try {
     const response = await fetch(
-      'https://script.google.com/macros/s/AKfycbwkwQF62CakrS9fl8GxigCm3Do72rv5nuqExKfomFpsa5hYD-cp42DTgcbeRdaKGv3i/exec', // החלף ב-URL של ה-Web App
+      'https://script.google.com/macros/s/AKfycbxvQF2Yvf2NiyVM8MlZcd08wJXca3ZiDRDdw5FCBZPCkFA62p7wrwET7yjIIq-aprQN/exec', // החלף ב-URL של ה-Web App
       {
         method: 'POST',
         mode: 'no-cors',
@@ -174,7 +174,6 @@ const formData = {
         body: JSON.stringify(formData)
       }
     );
-    console.log('response:', response);
   
     if (!response.ok) {
       throw new Error('Network response was not ok: ' + response.statusText);
@@ -218,7 +217,7 @@ renderCalendar();
 async function fetchAndMarkBookedSlots() {
     try {
       const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbwkwQF62CakrS9fl8GxigCm3Do72rv5nuqExKfomFpsa5hYD-cp42DTgcbeRdaKGv3i/exec',
+        'https://script.google.com/macros/s/AKfycbxvQF2Yvf2NiyVM8MlZcd08wJXca3ZiDRDdw5FCBZPCkFA62p7wrwET7yjIIq-aprQN/exec',
         { method: 'GET' }
       );
       
