@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
    <favicon type="image/x-icon" href="logo.png">
    <link rel="icon" type="image/png" href="logo.png">
-
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" rel="stylesheet" />
+   
     <style>
 
 /* Navbar Links */
@@ -298,7 +299,7 @@ h1, h2, h3,  h5, h6,
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #f8f9fa;
-    border-radius: 15px;
+    border-radius: 20px;
     margin-bottom: 20px;
     padding: 35px;
     text-align: center;
@@ -352,7 +353,7 @@ h1, h2, h3,  h5, h6,
 .carousel-next {
     background-color: rgba(255, 255, 255, 0.9);
     border: 2px solid #d56b00;
-    border-radius: 50%;
+    border-radius: 200%;
     width: 60px;
     height: 60px;
     display: flex;
@@ -390,7 +391,7 @@ h1, h2, h3,  h5, h6,
 .carousel-indicator {
     width: 10px;
     height: 10px;
-    border-radius: 50%;
+    border-radius: 200%;
     background-color: #e0e0e0;
     margin: 0 8px;
     cursor: pointer;
@@ -400,7 +401,7 @@ h1, h2, h3,  h5, h6,
 .carousel-indicator.active {
     background-color: #d56b00 !important;
     width: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 @keyframes modalSlideIn {
@@ -495,7 +496,7 @@ h1, h2, h3,  h5, h6,
 #scheduleTable td {
     padding: 12px;
     text-align: center;
-    border: 1px solid #dee2e6;
+    border: none;
     transition: all 0.2s ease;
 }
 #scheduleTable th {
@@ -508,25 +509,30 @@ h1, h2, h3,  h5, h6,
 
 .hour-cell {
     font-weight: bold;
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 .available-slot {
-    background-color: #e8f5e9 !important;
+    background-color: white !important;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 .available-slot:hover {
-    background-color: #A8C5A4 !important;
+    background-color: orange !important;
     color: #F8F8F7 !important;
     transform: scale(1.05);
 }
 
 .booked-slot {
-    background-color: #ffebee !important;
-}
+    background-color: #d56b00 ;
+    color: white;
+    cursor: not-allowed;
 
+}
+.booked{
+    cursor: unset!important;
+}
 .modal-content {
     direction: rtl;
 }
@@ -559,7 +565,7 @@ h1, h2, h3,  h5, h6,
 .zen-image-container {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
@@ -879,7 +885,7 @@ a.nav-link{
     width: 10px;
     height: 10px;
     background-color: #d56b00;
-    border-radius: 50%;
+    border-radius: 200%;
     margin: 0 0.5rem;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -892,7 +898,7 @@ a.nav-link{
 
 .schedule-container {
     background-color: #ffe6cc;
-    border-radius: 15px;
+    border-radius: 20px;
     box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
     padding: 1.5rem;
 }
@@ -904,19 +910,15 @@ a.nav-link{
 
 
 .available-slot {
-    background-color: #e8f5e9;
+    background-color: orange;
     cursor: pointer;
 }
 
 .available-slot:hover {
-    background-color: #A8C5A4 !important;
+    background-color: orange !important;
     color: #F8F8F7 !important;
 }
 
-.booked-slot {
-    background-color: #ffebee;
-    cursor: not-allowed;
-}
 
 @media (max-width: 1024px) {
 
@@ -954,8 +956,8 @@ a.nav-link{
 }
 
 .btn-primary:hover {
-    background-color: #A8C5A4 !important;
-    border-color: #A8C5A4 !important;
+    background-color: orange !important;
+    border-color: orange !important;
     transform: translateY(-3px);
 }
 
@@ -991,7 +993,7 @@ a.nav-link{
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-primary:hover {
-    background-color: #A8C5A4 !important;
+    background-color: orange !important;
     box-shadow: 0 10px 20px rgba(215, 189, 226, 0.15);
 }
 
@@ -1001,9 +1003,9 @@ a.nav-link{
     scroll-snap-type: x mandatory;
     gap: 1rem;
 }
-#contact{background-color: #ffffff;}
+#contact{background-color: white;}
 .contact-info {
-    background: #ffe6cc !important;
+    background: #ffe6cc!important;
     border-radius: 0.5rem;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
@@ -1020,8 +1022,7 @@ a.nav-link{
 }
 
 .hero-content {
-    max-width: 380px;
-    padding: 1.5rem;
+    padding: 10%;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 0.5rem;
 }
@@ -1065,7 +1066,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* padding: 3rem 1rem; */
     text-align: center;
     padding: 3rem 0;
     position: relative;
@@ -1074,24 +1074,8 @@ section {
     
 }
 
-/* section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(
-        circle at center, 
-        rgba(107, 91, 149, 0.05) 0%, 
-        transparent 70%
-    );
-    z-index: -1;
-    opacity: 0.5;
-} */
 
 section:hover {
-    /* transform: translateY(-10px); */
     box-shadow: 0 10px 20px rgba(215, 189, 226, 0.15);
 }
 
@@ -1103,7 +1087,7 @@ img {
     margin: 0 auto;
     object-fit: cover;
     object-position: center;
-    border-radius: 12px;
+    border-radius: 20px;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
 }
@@ -1208,11 +1192,6 @@ img {
         flex-direction: column;
         text-align: center;
     }
-/* 
-    .navbar-brand {
-        text-align: center;
-        margin-bottom: 10px;
-    } */
 
     /* Forms */
     .form-control {
@@ -1323,15 +1302,13 @@ body{background: #ffe6cc;}
 
 /* About Section */
 #about {
-    /* background: linear-gradient(135deg, #f3e5f5, #e8f5e9); */
-    /* padding: 5rem 0; */
     position: relative;
     overflow: hidden;
 }
 
 .about-content {
     padding: 2rem;
-    /* background: rgba(255, 255, 255, 0.9); */
+    background:#ffe6cc;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -1345,14 +1322,14 @@ body{background: #ffe6cc;}
 .about-image-container {
     position: relative;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 200%;
 }
 
 .about-image-container img {
     width: 100%;
     height: auto;
     transition: transform 0.6s ease, box-shadow 0.6s ease;
-    border-radius: 50%;
+    border-radius: 200%;
 }
 
 .about-image-container img:hover {
@@ -1386,6 +1363,86 @@ body{background: #ffe6cc;}
 }
 #appointments{height: auto;}
 .about-me-container{flex-flow:row-reverse}
+
+#calendar {
+      margin: 20px auto;
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+      direction: rtl;
+    }
+    .calendar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .week-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+      padding-bottom: 3rem;
+      padding-top: 3rem;
+      background-color: #ffffff;
+      border-radius: 20px;
+    }
+    .day-column {
+      /* border: 1px solid #ccc; */
+      width: 100px;
+      margin: 0 5px;
+      padding: 5px;
+    }
+    .day-column h4 {
+      margin: 5px 0;
+      font-size: 14px;
+      background-color: #ffe6cc;
+      font-weight: 600;
+
+    }
+    .time-slot {
+      margin: 3px 0;
+      cursor: pointer;
+      padding: 3px;
+      background-color: #f5f5f5;
+      border:1px solid #ffe6cc;
+      border-radius: 5px;
+
+    }
+    .time-slot:hover {
+      background-color: #e0e0e0;
+    }
+    #appointment-form {
+      margin: 20px auto;
+      width: 90%;
+      max-width: 500px;
+      text-align: right;
+    }
+    #appointment-form label {
+      display: block;
+      margin: 8px 0 4px;
+    }
+    #appointment-form input {
+      width: 100%;
+      /* box-sizing: border-box; */
+      padding: 6px;
+      border-radius: 20px;
+    }
+    #appointment-form button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+    .success-message, .error-message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .success-message {
+      color: green;
+    }
+    .error-message {
+      color: red;
+    }
 
     </style>
 </head>
@@ -1639,107 +1696,36 @@ body{background: #ffe6cc;}
             </div>
         </div>
     </section>
-
-    <!-- Appointments Section -->
-    <section id="appointments" dir="rtl">
+    <section id="appointments">
         <div class="container">
-            <h2 class="section-title text-center mb-5">לוח זמנים לקביעת תור</h2>
+            <div id="calendar"></div>
+
+            <form id="appointment-form">
+              <label for="requestDate" hidden>תאריך בקשה:</label>
+              <input type="text" id="requestDate" name="requestDate" readonly hidden />
             
-            <div class="row">
-                <div class="col-12">
-                    <div class="schedule-container">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover text-center" id="scheduleTable">
-                                <thead class="table-dark">
-                                    <tr>
-                                        <th>שעה</th>
-                                        <th>ראשון</th>
-                                        <th>שני</th>
-                                        <th>שלישי</th>
-                                        <th>רביעי</th>
-                                        <th>חמישי</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="scheduleTableBody">
-                                    <!-- Schedule will be dynamically populated here -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Booking Modal -->
-            <div class="modal" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="bookingModalLabel">הזמנת תור</h5>
-                            <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p class="selected-time-display mb-3"></p>
-                            <form id="bookingForm" class="text-end">
-                                <input type="hidden" id="selectedTimeSlot" name="timeSlot">
-                                <div class="mb-3">
-                                    <label for="clientName" class="form-label">שם מלא</label>
-                                    <input type="text" class="form-control text-end" id="clientName" required 
-                                        placeholder="הכנס את שמך המלא">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="clientPhone" class="form-label">מספר טלפון</label>
-                                    <input type="tel" class="form-control text-end" id="clientPhone" required 
-                                        placeholder="הכנס מספר טלפון">
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">שלח בקשה לתור</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Admin Panel Modal -->
-            <div class="modal" id="adminModal" tabindex="-1" aria-labelledby="adminModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="adminModalLabel">ניהול תורים</h5>
-                            <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h6 class="mb-3">בקשות תורים ממתינות</h6>
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>יום</th>
-                                            <th>שעה</th>
-                                            <th>שם</th>
-                                            <th>טלפון</th>
-                                            <th>פעולות</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="pendingBookingsBody">
-                                        <!-- Pending bookings will be populated here -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Admin Button (only visible to admin) -->
-            <div class="text-center mt-4">
-                <button id="adminButton" class="btn btn-outline-primary" >
-                    <i class="fas fa-cog me-2"></i> ניהול תורים
-                </button>
-            </div>
-        </div>
-
-    
+              <label for="fullName">שם מלא:</label>
+              <input type="text" id="fullName" name="fullName" required />
+            
+              <label for="phone">מספר פלאפון:</label>
+              <input type="tel" id="phone" name="phone" required />
+            
+              <label for="appointmentDate" hidden>תאריך:</label>
+              <input type="text" id="appointmentDate" name="appointmentDate" readonly hidden />
+            
+              <label for="appointmentTime" hidden>שעה:</label>
+              <input type="text" id="appointmentTime" name="appointmentTime" readonly hidden />
+            
+              <button type="submit">קבע תור</button>
+            
+              <div class="success-message" id="successMessage" style="display: none;"></div>
+              <div class="error-message" id="errorMessage" style="display: none;"></div>
+            </form>
+            
+          
+</div>
     </section>
-
+    
     <!-- Contact Section -->
     <section id="contact" >
         <div class="container">
@@ -1748,23 +1734,24 @@ body{background: #ffe6cc;}
                 <div class="col-lg-6">
                     <div class="contact-info p-4 shadow-sm">
                         <h3>פרטי התקשרות</h3>
-                        <div class="contact-method mb-3">
+                        <br>
+                        <br>
+                        <div class="contact-method mb-3" data-type="phone">
                             <i class="fas fa-phone text-primary"></i>
                             <span>050-7431-198</span>
                         </div>
-                        <div class="contact-method mb-3">
+                        <div class="contact-method mb-3" data-type="email">
                             <i class="fas fa-envelope text-primary"></i>
                             <span>uriss100@gmail.com</span>
                         </div>
-                        <div class="contact-method mb-3">
+                        <div class="contact-method mb-3" data-type="facebook">
                             <i class="fab fa-facebook text-primary"></i>
                             <span>אורי שמאי - מטפל במגע</span>
                         </div>
-                        
+                        <br>
                         <div class="hours-of-operation mt-4">
                             <h4>שעות פעילות</h4>
-                            <p>א'-ה': 9:00-17:00</p>
-                            <p>ו': בתאום מראש</p>
+                            <p>א'-ה': 9:00-18:00</p>
                         </div>
                     </div>
                 </div>
@@ -1774,7 +1761,7 @@ body{background: #ffe6cc;}
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3390.8876411466897!2d34.5661373!3d31.5661666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15029f6b5b418bef%3A0x92c8f4c2fb8b7a31!2z15DXqNeW!5e0!3m2!1siw!2sil!4v1673843298440!5m2!1siw!2sil" 
                             width="100%" 
                             height="450" 
-                            style="border:0; border-radius: 10px;" 
+                            style="border:0; border-radius: 20px;" 
                             allowfullscreen="" 
                             loading="lazy">
                         </iframe>
@@ -1808,10 +1795,7 @@ body{background: #ffe6cc;}
         </div>
     </div>
 
-    <!-- Firebase Authentication and Realtime Database -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+
 
     <!-- Fullcalendar for Interactive Scheduling -->
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.min.css' rel='stylesheet' />
@@ -1819,6 +1803,10 @@ body{background: #ffe6cc;}
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+    <script src="https://apis.google.com/js/api.js"></script>
     <script src="js/main.js"></script>
+    
+    <script src="js/scheduling.js"></script>
+
 </body>
 </html>
