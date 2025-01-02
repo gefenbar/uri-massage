@@ -167,7 +167,7 @@ const formData = {
       'https://script.google.com/macros/s/AKfycbwkwQF62CakrS9fl8GxigCm3Do72rv5nuqExKfomFpsa5hYD-cp42DTgcbeRdaKGv3i/exec', // החלף ב-URL של ה-Web App
       {
         method: 'POST',
-        mode: 'no-cors',
+        // mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json'
         },
