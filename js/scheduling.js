@@ -180,7 +180,7 @@ const formData = {
     }
   
     const data = await response.json();
-    if (data.status === 'success') {
+    // if (data.status === 'success') {
         fetchAndMarkBookedSlots();
 
       // הצלחה
@@ -194,10 +194,11 @@ const formData = {
       phoneInput.value = '';
       appointmentDateInput.value = '';
       appointmentTimeInput.value = '';
-    } else {
-      // שגיאה בצד השרת
-      throw new Error(data.message || 'Unknown error from server');
-    }
+    // } 
+    // else {
+    //   // שגיאה בצד השרת
+    //   throw new Error(data.message || 'Unknown error from server');
+    // }
   } catch (error) {
     // successMessage.style.display = 'none';
     // errorMessage.textContent = 'אירעה שגיאה בשליחת הנתונים: ' + error.message;
