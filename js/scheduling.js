@@ -164,7 +164,7 @@ const formData = {
   
   try {
     const response = await fetch(
-      'https://script.google.com/macros/s/AKfycbxvQF2Yvf2NiyVM8MlZcd08wJXca3ZiDRDdw5FCBZPCkFA62p7wrwET7yjIIq-aprQN/exec', // החלף ב-URL של ה-Web App
+      'https://script.google.com/macros/s/AKfycbzumZG1FsBBeMOSZgIqSVSVwvbaq7Y82dI8htg0doZgWSy1gddLlgH5lFGFGjYolriZgw/exec', // החלף ב-URL של ה-Web App
       {
         method: 'POST',
         mode: 'no-cors',
@@ -216,11 +216,7 @@ renderCalendar();
 // פונקציה לקבלת תורים קיימים ולסימון משבצות תפוסות
 async function fetchAndMarkBookedSlots() {
     try {
-      const response = await fetch(
-        'https://script.google.com/macros/s/AKfycbxvQF2Yvf2NiyVM8MlZcd08wJXca3ZiDRDdw5FCBZPCkFA62p7wrwET7yjIIq-aprQN/exec',
-        { method: 'GET' }
-      );
-      
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzumZG1FsBBeMOSZgIqSVSVwvbaq7Y82dI8htg0doZgWSy1gddLlgH5lFGFGjYolriZgw/exec', { method: 'GET' });
       if (!response.ok) {
         throw new Error('Failed to fetch appointments');
       }
@@ -228,51 +224,27 @@ async function fetchAndMarkBookedSlots() {
       const appointments = await response.json();
       console.log('Fetched appointments:', appointments);
   
-      // פונקציה להמרת מחרוזת תאריך בפורמט ISO ל־DD/MM/YYYY
-      function formatISOToDDMMYYYY(isoString) {
-        const dateObj = new Date(isoString);
-        const day = String(dateObj.getDate()).padStart(2, '0');
-        const month = String(dateObj.getMonth() + 1).padStart(2, '0');
-        const year = dateObj.getFullYear();
-        return `${day}/${month}/${year}`;
-      }
-      
-      // פונקציה להמרת מחרוזת זמן בפורמט ISO ל־HH:MM
-      function formatISOToHHMM(isoString) {
-        const dateObj = new Date(isoString);
-        const hours = String(dateObj.getHours()).padStart(2, '0');
-        const minutes = String(dateObj.getMinutes()).padStart(2, '0');
-        return `${hours}:${minutes}`;
-      }
-      
-      // פונקציה לחילוץ חלק התאריך מהכותרת (למשל "ראשון - 02/01/2025" => "02/01/2025")
-      function getDatePartFromTitle(dayTitle) {
-        // נניח שהפורמט תמיד "יום כלשהו - DD/MM/YYYY"
-        const parts = dayTitle.split(" ");
-        return parts[1] ? parts[1].trim() : null;
-      }
-  
-      // מעבר על כל התורים
+      // עיבוד התורים
       appointments.forEach(appointment => {
-        // המרת "תאריך" מה־Sheet מ־ISO ל־DD/MM/YYYY
-        const appointmentDateStr = formatISOToDDMMYYYY(appointment["תאריך"] || '');
-        // המרת "שעה" מה־Sheet מ־ISO ל־HH:MM
-        const appointmentTimeStr = formatISOToHHMM(appointment["שעה"] || '');
+        // עיבוד תאריך לפורמט DD/MM/YYYY
+        const appointmentDateObj = new Date(appointment.appointmentDate);
+        const appointmentDateStr = `${String(appointmentDateObj.getDate()).padStart(2, '0')}/${String(appointmentDateObj.getMonth() + 1).padStart(2, '0')}/${appointmentDateObj.getFullYear()}`;
   
+        // עיבוד שעה לפורמט HH:MM
+        const appointmentTimeObj = new Date(appointment.appointmentTime);
+        const appointmentTimeStr = `${String(appointmentTimeObj.getHours()).padStart(2, '0')}:${String(appointmentTimeObj.getMinutes()).padStart(2, '0')}`;
+  
+        // מעבר על כל ימי השבוע ביומן
         const dayColumns = document.querySelectorAll('.day-column');
-        
         dayColumns.forEach(dayColumn => {
-          // לדוגמה: "ראשון - 02/01/2025"
           const dayTitle = dayColumn.querySelector('h4').textContent.trim();
-          
-          // חילוץ חלק התאריך בלבד
-          const dayTitleDatePart = getDatePartFromTitle(dayTitle);
+          const dayTitleDatePart = dayTitle.split(" ")[1].trim(); // חילוץ חלק התאריך בלבד
   
-          // משווים את התאריך בפורמט DD/MM/YYYY
+          // השוואת תאריכים
           if (dayTitleDatePart === appointmentDateStr) {
             const timeSlots = dayColumn.querySelectorAll('.time-slot');
             timeSlots.forEach(slot => {
-              // משווים גם את השעה בפורמט HH:MM
+              // השוואת שעות
               if (slot.textContent.trim() === appointmentTimeStr) {
                 slot.style.backgroundColor = 'red';
                 slot.style.color = 'white';
