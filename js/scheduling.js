@@ -176,7 +176,7 @@ const formData = {
     );
   
     if (!response.ok) {
-      throw new Error('Network response was not ok: ' + response.statusText);
+    //   throw new Error('Network response was not ok: ' + response.statusText);
     }
   
     const data = await response.json();
@@ -199,10 +199,10 @@ const formData = {
       throw new Error(data.message || 'Unknown error from server');
     }
   } catch (error) {
-    successMessage.style.display = 'none';
-    errorMessage.textContent = 'אירעה שגיאה בשליחת הנתונים: ' + error.message;
-    errorMessage.style.display = 'block';
-    console.error('Error:', error);
+    // successMessage.style.display = 'none';
+    // errorMessage.textContent = 'אירעה שגיאה בשליחת הנתונים: ' + error.message;
+    // errorMessage.style.display = 'block';
+    // console.error('Error:', error);
   }
   
   
