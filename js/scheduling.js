@@ -79,7 +79,7 @@ function renderCalendar() {
   headerDiv.appendChild(prevBtn);
   headerDiv.appendChild(nextBtn);
   calendarDiv.appendChild(headerDiv);
-
+    
   // נקודת התחלה – היום 
   const today = new Date();
   // עבור "תאריך בקשה" נמלא תמיד את התאריך הנוכחי
@@ -130,6 +130,7 @@ function renderCalendar() {
     }
 
     calendarDiv.appendChild(weekDiv);
+
   }
 }
 
@@ -162,7 +163,7 @@ const formData = {
     appointmentTime: appointmentTimeInput.value
   };
   
-  try {
+//   try {
     const response = await fetch(
       'https://script.google.com/macros/s/AKfycbzumZG1FsBBeMOSZgIqSVSVwvbaq7Y82dI8htg0doZgWSy1gddLlgH5lFGFGjYolriZgw/exec', // החלף ב-URL של ה-Web App
       {
@@ -175,13 +176,14 @@ const formData = {
       }
     );
   
-    if (!response.ok) {
-      throw new Error('Network response was not ok: ' + response.statusText);
-    }
+    // if (!response.ok) {
+    //   throw new Error('Network response was not ok: ' + response.statusText);
+    // }
   
-    const data = await response.json();
-    if (data.status === 'success') {
-        fetchAndMarkBookedSlots();
+    // const data = await response.json();
+    // console.log(response)
+    // if (data.status === 'success') {
+      fetchAndMarkBookedSlots();
 
       // הצלחה
       successMessage.textContent = 'התור נקבע בהצלחה!';
@@ -194,16 +196,18 @@ const formData = {
       phoneInput.value = '';
       appointmentDateInput.value = '';
       appointmentTimeInput.value = '';
-    } else {
-      // שגיאה בצד השרת
-      throw new Error(data.message || 'Unknown error from server');
-    }
-  } catch (error) {
-    successMessage.style.display = 'none';
-    errorMessage.textContent = 'אירעה שגיאה בשליחת הנתונים: ' + error.message;
-    errorMessage.style.display = 'block';
-    console.error('Error:', error);
-  }
+    // } 
+//     else {
+//       // שגיאה בצד השרת
+//       throw new Error(data.message || 'Unknown error from server');
+//     // }
+//   } 
+//   catch (error) {
+//     successMessage.style.display = 'none';
+//     errorMessage.textContent = 'אירעה שגיאה בשליחת הנתונים: ' + error.message;
+//     errorMessage.style.display = 'block';
+//     console.error('Error:', error);
+//   }
   
   
   

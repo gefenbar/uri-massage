@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const testimonialsCarousel = new TestimonialsCarousel('#testimonials .testimonials-carousel');
+    const galleryCarousel = new TestimonialsCarousel('#gallery .testimonials-carousel');
 
      const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
     const sections = Array.from(navLinks).map(link => {
