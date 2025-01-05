@@ -40,7 +40,14 @@ function formatDate(dateObj) {
 }
 
 
-
+function animateLoadingDots(element) {
+    let dots = 0;
+    const interval = setInterval(() => {
+        dots = (dots + 1) % 4;
+        element.textContent = 'אנא המתן' + '.'.repeat(dots);
+    }, 500);
+    return interval;
+}
 
 // פונקציה לציור היומן
 function renderCalendar() {
@@ -154,7 +161,7 @@ form.addEventListener('submit', async (e) => {
 
   // בדיקת מילוי שדות הכרחיים
   if (!fullName || !phone || !appointmentDate || !appointmentTime) {
-    alert('יש למלא את כל השדות הדרושים ולהבחר תאריך ושעה');
+    alert('יש למלא את כל השדות הדרושים ולבחור תור');
     return;
   }
 
@@ -166,8 +173,14 @@ const formData = {
     appointmentDate: appointmentDateInput.value,
     appointmentTime: appointmentTimeInput.value
   };
-  
-//   try {
+
+  // Start animation
+  const loadingInterval = animateLoadingDots(successMessage);
+
+  successMessage.textContent = 'אנא המתן...';
+  successMessage.style.color = '#d56b00';
+  successMessage.style.display = 'block';
+
     const response = await fetch(
       'https://script.google.com/macros/s/AKfycbzumZG1FsBBeMOSZgIqSVSVwvbaq7Y82dI8htg0doZgWSy1gddLlgH5lFGFGjYolriZgw/exec', // החלף ב-URL של ה-Web App
       {
@@ -179,41 +192,30 @@ const formData = {
         body: JSON.stringify(formData)
       }
     );
-  
-    // if (!response.ok) {
-    //   throw new Error('Network response was not ok: ' + response.statusText);
-    // }
-  
-    // const data = await response.json();
-    // console.log(response)
-    // if (data.status === 'success') {
+
       fetchAndMarkBookedSlots();
 
-      // הצלחה
-      successMessage.textContent = 'התור נקבע בהצלחה!';
-      successMessage.style.display = 'block';
-      errorMessage.style.display = 'none';
+        setTimeout(() => {
+            clearInterval(loadingInterval);
+
+            // הצלחה
+            successMessage.textContent = 'התור נקבע בהצלחה!';
+            successMessage.style.color = 'green';
+            successMessage.style.display = 'block';
+            
+            errorMessage.style.display = 'none';
+
+            // איפוס שדות
+            requestDateInput.value = '';
+            fullNameInput.value = '';
+            phoneInput.value = '';
+            appointmentDateInput.value = '';
+            appointmentTimeInput.value = '';
+
+
+        }, 3500);
       
-      // איפוס שדות
-      requestDateInput.value = '';
-      fullNameInput.value = '';
-      phoneInput.value = '';
-      appointmentDateInput.value = '';
-      appointmentTimeInput.value = '';
-    // } 
-//     else {
-//       // שגיאה בצד השרת
-//       throw new Error(data.message || 'Unknown error from server');
-//     // }
-//   } 
-//   catch (error) {
-//     successMessage.style.display = 'none';
-//     errorMessage.textContent = 'אירעה שגיאה בשליחת הנתונים: ' + error.message;
-//     errorMessage.style.display = 'block';
-//     console.error('Error:', error);
-//   }
-  
-  
+
   
 });
 
