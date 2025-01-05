@@ -13,7 +13,7 @@ const errorMessage = document.getElementById('errorMessage');
 // מספר השבועות להצגה בכל עמוד (1 שבוע).
 const WEEKS_PER_PAGE = 1;
 // שעות לדוגמה בכל יום. ניתן להתאים כרצונכם.
-const timeSlots = ['09:00', '12:00', '19:00'];
+const timeSlots = ['בוקר', 'צהרים', 'ערב'];
 
 // משתנה לשמירת נקודת ההתחלה (היום הראשון) של העמוד הנוכחי
 let currentOffset = 0; // נספר בימים (0 זה היום)
@@ -104,7 +104,7 @@ function renderCalendar() {
       let shortDate = [];
       shortDate.push(formatDate(dayDate).split("/")[0]);
       shortDate.push(formatDate(dayDate).split("/")[1]);
-      dayTitle.textContent = `${getDayName(dayIndex)} ${shortDate.join("/")}`;
+      dayTitle.innerHTML = `${getDayName(dayIndex)}<br>${shortDate.join("/")}`;
       dayTitle.dataset.date = formatDate(dayDate);
       dayColumn.appendChild(dayTitle);
 
@@ -239,8 +239,8 @@ async function fetchAndMarkBookedSlots() {
         const appointmentDateStr = `${String(appointmentDateObj.getDate()).padStart(2, '0')}/${String(appointmentDateObj.getMonth() + 1).padStart(2, '0')}/${appointmentDateObj.getFullYear()}`;
   
         // עיבוד שעה לפורמט HH:MM
-        const appointmentTimeObj = new Date(appointment.appointmentTime);
-        const appointmentTimeStr = `${String(appointmentTimeObj.getHours()).padStart(2, '0')}:${String(appointmentTimeObj.getMinutes()).padStart(2, '0')}`;
+        // const appointmentTimeObj = new Date(appointment.appointmentTime);
+        const appointmentTimeStr = appointment.appointmentTime;
   
         // מעבר על כל ימי השבוע ביומן
         const dayColumns = document.querySelectorAll('.day-column');
