@@ -256,6 +256,7 @@ async function fetchAndMarkBookedSlots() {
                 slot.style.backgroundColor = 'red';
                 slot.style.color = 'white';
                 slot.classList.add('booked');
+                slot.textContent = 'תפוס';
                 slot.onclick = null; // מנטרלים לחיצה על משבצת תפוסה
               }
             });
