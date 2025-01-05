@@ -105,6 +105,7 @@ function renderCalendar() {
       shortDate.push(formatDate(dayDate).split("/")[0]);
       shortDate.push(formatDate(dayDate).split("/")[1]);
       dayTitle.textContent = `${getDayName(dayIndex)} ${shortDate.join("/")}`;
+      dayTitle.dataset.date = formatDate(dayDate);
       dayColumn.appendChild(dayTitle);
 
       // יצירת משבצות שעות
@@ -244,13 +245,13 @@ async function fetchAndMarkBookedSlots() {
         // מעבר על כל ימי השבוע ביומן
         const dayColumns = document.querySelectorAll('.day-column');
         dayColumns.forEach(dayColumn => {
-          const dayTitle = dayColumn.querySelector('h4').textContent.trim();
-          const dayTitleDatePart = dayTitle.split(" ")[1].trim(); // חילוץ חלק התאריך בלבד
+          const dayTitleDatePart =dayColumn.querySelector('h4').dataset.date; 
   
           // השוואת תאריכים
           if (dayTitleDatePart === appointmentDateStr) {
             const timeSlots = dayColumn.querySelectorAll('.time-slot');
             timeSlots.forEach(slot => {
+                console.log(slot)
               // השוואת שעות
               if (slot.textContent.trim() === appointmentTimeStr) {
                 slot.style.backgroundColor = 'red';
