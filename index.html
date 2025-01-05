@@ -38,7 +38,9 @@
     color: #d56b00 !important;  /* Deep charcoal */
     /* transition: color 0.3s ease; */
 }
-
+.navbar-toggler{
+    border: none;
+}
 
 
 /* Headings and Titles */
@@ -198,6 +200,9 @@ h1, h2, h3,  h5, h6,
     .hero-content {
         padding: 0.5rem 0;
     }
+    .testimonial-card{
+        padding: 10px!important;
+    }
 
   
 
@@ -211,6 +216,13 @@ h1, h2, h3,  h5, h6,
         width: 100%;
         min-width: auto;
         
+    }
+    .day-column h4 {
+      margin: 5px 0;
+      font-size: 12px!important;
+      background-color: #ffe6cc;
+      padding:5px;
+
     }
 }
 
@@ -843,6 +855,16 @@ a.nav-link{
 .benefit-item i {
     color: #d56b00 !important;
 }
+#gallery .testimonial-card{
+    padding: 0;
+    margin-bottom: 0;
+    height: auto;
+}
+#gallery .testimonial-card:hover{
+box-shadow: none;
+transition: none;
+transform: none;
+}
 /* #gallery {height: auto;}
 #gallery .img-fluid {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1004,9 +1026,9 @@ a.nav-link{
     scroll-snap-type: x mandatory;
     gap: 1rem;
 }
-#contact{background-color: white;}
+#contact{background-color: #ffe6cc;}
 .contact-info {
-    background: #ffe6cc!important;
+    background: white!important;
     border-radius: 0.5rem;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
@@ -1095,7 +1117,8 @@ img {
 
 .img-fluid {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-position: center;
     object-fit: cover;
 }
 
@@ -1174,7 +1197,7 @@ img {
     /* Layout Adjustments */
     .container {
         padding: 10px;
-        width: 100%;
+        /* width: 100%; */
     }
 
    
@@ -1271,7 +1294,7 @@ body{background: #ffe6cc;}
 
 .healing-content {
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: #ffe6cc;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
@@ -1305,6 +1328,7 @@ body{background: #ffe6cc;}
 #about {
     position: relative;
     overflow: hidden;
+    background-color: white;
 }
 
 .about-content {
@@ -1398,6 +1422,7 @@ body{background: #ffe6cc;}
       font-size: 14px;
       background-color: #ffe6cc;
       font-weight: 600;
+      padding:5px;
 
     }
     .time-slot {
@@ -1467,16 +1492,17 @@ body{background: #ffe6cc;}
                         <a class="nav-link" href="#about">צלילים מרפאים</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about-me">קצת עליי</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#gallery">גלריה</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#testimonials">המלצות</a>
+                        <a class="nav-link" href="#about-me">קצת עליי</a>
                     </li>
+                 
                     <li class="nav-item">
                         <a class="nav-link" href="#appointments">קביעת תור</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">המלצות</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">צור קשר</a>
@@ -1534,33 +1560,6 @@ body{background: #ffe6cc;}
         </div>
     </div>
 </section>
-
-  <!-- About Me Section -->
-<section id="about-me">
-    <div class="container">
-        <h2 class="section-title text-center mb-5 text-uppercase fw-bold">קצת עליי</h2>
-        <div class="row align-items-center about-me-container">
-            <div class="col-lg-6">
-                <div class="about-content">
-                    <h3 class="fw-bold mb-4">אורי שמאי</h3>
-                    <p class="text-muted mb-3">אני אורי שמאי, מטפל מוסמך בצליל ("סאונד הילינג"), עם התמחות בקערות טיבטיות וכלים נוספים. אני מטפל בקליניקה קסומה, שקטה ומקצועית בקיבוץ ארז, בו אני גר.</p>
-                    <p class="text-muted mb-3">נשוי לאודליה ואב לשלושה ילדים מקסימים. המטרה שלי היא להביא להרפיה, איזון ושלווה באמצעות טיפול בקול ובתדרים. אני מאמין בכוחו של הצליל לרפא ולהעצים.</p>
-                    <p class="text-muted">אני מציע טיפולים מותאמים לצרכים האישיים של המטופלים, כולל סשנים פרטיים, טיפולים בקבוצות, מסיבות רווקות, טיפול לילדים בגיל הרך ובגנים. כל טיפול מותאם אישית ומטרתו להביא לשקט פנימי, הרמוניה וריפוי עמוק.</p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="about-image-container text-center">
-                    <img src="uri.webp" 
-                         alt="אורי שמאי - מטפל בצליל" 
-                         class="img-fluid rounded shadow">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
 
     <!-- Gallery Section -->
     <section id="gallery">
@@ -1623,6 +1622,64 @@ body{background: #ffe6cc;}
         </div>
     </section>
 
+  <!-- About Me Section -->
+<section id="about-me">
+    <div class="container">
+        <h2 class="section-title text-center mb-5 text-uppercase fw-bold">קצת עליי</h2>
+        <div class="row align-items-center about-me-container">
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <h3 class="fw-bold mb-4">אורי שמאי</h3>
+                    <p class="text-muted mb-3">אני אורי שמאי, מטפל מוסמך בצליל ("סאונד הילינג"), עם התמחות בקערות טיבטיות וכלים נוספים. אני מטפל בקליניקה קסומה, שקטה ומקצועית בקיבוץ ארז, בו אני גר.</p>
+                    <p class="text-muted mb-3">נשוי לאודליה ואב לשלושה ילדים מקסימים. המטרה שלי היא להביא להרפיה, איזון ושלווה באמצעות טיפול בקול ובתדרים. אני מאמין בכוחו של הצליל לרפא ולהעצים.</p>
+                    <p class="text-muted">אני מציע טיפולים מותאמים לצרכים האישיים של המטופלים, כולל סשנים פרטיים, טיפולים בקבוצות, מסיבות רווקות, טיפול לילדים בגיל הרך ובגנים. כל טיפול מותאם אישית ומטרתו להביא לשקט פנימי, הרמוניה וריפוי עמוק.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-image-container text-center">
+                    <img src="uri.webp" 
+                         alt="אורי שמאי - מטפל בצליל" 
+                         class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    
+    <section id="appointments">
+        <div class="container">
+            <div id="calendar"></div>
+
+            <form id="appointment-form">
+              <label for="requestDate" hidden>תאריך בקשה:</label>
+              <input type="text" id="requestDate" name="requestDate" readonly hidden />
+            
+              <label for="fullName">שם מלא:</label>
+              <input type="text" id="fullName" name="fullName" required />
+            
+              <label for="phone">מספר פלאפון:</label>
+              <input type="tel" id="phone" name="phone" required />
+            
+              <label for="appointmentDate" hidden>תאריך:</label>
+              <input type="text" id="appointmentDate" name="appointmentDate" readonly hidden />
+            
+              <label for="appointmentTime" hidden>שעה:</label>
+              <input type="text" id="appointmentTime" name="appointmentTime" readonly hidden />
+            
+              <button type="submit" class="btn btn-outline-dark animate__animated animate__zoomIn">קבע תור</button>
+            
+              <div class="success-message" id="successMessage" style="display: none;"></div>
+              <div class="error-message" id="errorMessage" style="display: none;"></div>
+            </form>
+            
+          
+</div>
+    </section>
     <!-- Testimonials Section -->
     <section id="testimonials" >
         <div class="container">
@@ -1699,36 +1756,6 @@ body{background: #ffe6cc;}
             </div>
         </div>
     </section>
-    <section id="appointments">
-        <div class="container">
-            <div id="calendar"></div>
-
-            <form id="appointment-form">
-              <label for="requestDate" hidden>תאריך בקשה:</label>
-              <input type="text" id="requestDate" name="requestDate" readonly hidden />
-            
-              <label for="fullName">שם מלא:</label>
-              <input type="text" id="fullName" name="fullName" required />
-            
-              <label for="phone">מספר פלאפון:</label>
-              <input type="tel" id="phone" name="phone" required />
-            
-              <label for="appointmentDate" hidden>תאריך:</label>
-              <input type="text" id="appointmentDate" name="appointmentDate" readonly hidden />
-            
-              <label for="appointmentTime" hidden>שעה:</label>
-              <input type="text" id="appointmentTime" name="appointmentTime" readonly hidden />
-            
-              <button type="submit" class="btn btn-outline-dark animate__animated animate__zoomIn">קבע תור</button>
-            
-              <div class="success-message" id="successMessage" style="display: none;"></div>
-              <div class="error-message" id="errorMessage" style="display: none;"></div>
-            </form>
-            
-          
-</div>
-    </section>
-    
     <!-- Contact Section -->
     <section id="contact" >
         <div class="container">
