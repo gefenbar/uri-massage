@@ -209,12 +209,6 @@ place-items: center;
     }
      
 
-    .testimonial-card{
-        /* padding: 10px!important; */
-    }
-
-  
-
     .hero-cta-group {
         flex-direction: column;
         align-items: stretch;
@@ -496,7 +490,7 @@ place-items: center;
     .calendar-header .btn{
         padding: 5px 10px;
     }
-    }
+    
     .testimonial-slide {
         width: 85%;
         margin-bottom: 15px;
@@ -1077,9 +1071,7 @@ transform: none;
     padding: 1.5rem 0;
     background-color: #ffe6cc;
 }
-#about-me{
-    /* height: auto; */
-}
+
 .card {
     background: white;
     border-radius: 0.5rem;
@@ -1488,7 +1480,15 @@ body{background: #ffe6cc;}
       color: red;
     }
 
-
+.contact-method .btn:hover{
+transform: none;
+/* transition: none; */
+}
+.contact-method .btn span{
+    font-size: 75%;
+    margin: 10px;
+    
+}
         </style>
 </head>
 <body>
@@ -1496,7 +1496,7 @@ body{background: #ffe6cc;}
     <nav class="navbar navbar-expand-md navbar-light fixed-top">
         <div class="container-fluid px-4">
             <a class="" href="#home">
-                <img src="logo.png" alt="לוגו אורי שמאי" class="logo nav-link" style="max-height: 50px;">
+                <img src="logo.png" alt="לוגו אורי שמאי" class="logo" style="max-height: 50px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -1786,15 +1786,15 @@ body{background: #ffe6cc;}
                         <br>
                         <div class="contact-method mb-3" data-type="phone">
                             <i class="fas fa-phone text-primary"></i>
-                            <span>050-7431-198</span>
+                            <a href="tel:0507431198" class="btn p-1"><span>050-7431-198</span></a>
                         </div>
                         <div class="contact-method mb-3" data-type="email">
                             <i class="fas fa-envelope text-primary"></i>
-                            <span>uriss100@gmail.com</span>
+                            <a href="mailto:uriss100@gmail.com" class="btn p-1"><span>uriss100@gmail.com</span></a>
                         </div>
                         <div class="contact-method mb-3" data-type="facebook">
                             <i class="fab fa-facebook text-primary"></i>
-                            <span>אורי שמאי - מטפל במגע</span>
+                            <a href="https://www.facebook.com/uri.shmai/" class="btn p-1" target="_blank"><span>אורי שמאי - מטפל במגע</span></a>
                         </div>
                         <br>
                         <div class="hours-of-operation mt-4">
