@@ -101,7 +101,10 @@ function renderCalendar() {
 
       // כותרת היום בשבוע + תאריך
       const dayTitle = document.createElement('h4');
-      dayTitle.textContent = `${getDayName(dayIndex)} ${formatDate(dayDate)}`;
+      let shortDate = [];
+      shortDate.push(formatDate(dayDate).split("/")[0]);
+      shortDate.push(formatDate(dayDate).split("/")[1]);
+      dayTitle.textContent = `${getDayName(dayIndex)} ${shortDate.join("/")}`;
       dayColumn.appendChild(dayTitle);
 
       // יצירת משבצות שעות
