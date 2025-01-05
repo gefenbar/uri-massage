@@ -230,7 +230,7 @@ async function fetchAndMarkBookedSlots() {
       }
   
       const appointments = await response.json();
-      console.log('Fetched appointments:', appointments);
+    //   console.log('Fetched appointments:', appointments);
   
       // עיבוד התורים
       appointments.forEach(appointment => {
@@ -251,7 +251,6 @@ async function fetchAndMarkBookedSlots() {
           if (dayTitleDatePart === appointmentDateStr) {
             const timeSlots = dayColumn.querySelectorAll('.time-slot');
             timeSlots.forEach(slot => {
-                console.log(slot)
               // השוואת שעות
               if (slot.textContent.trim() === appointmentTimeStr) {
                 slot.style.backgroundColor = 'red';
