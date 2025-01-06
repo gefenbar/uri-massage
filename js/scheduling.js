@@ -192,7 +192,7 @@ const formData = {
         body: JSON.stringify(formData)
       }
     );
-
+    
       fetchAndMarkBookedSlots();
 
         setTimeout(() => {
@@ -202,7 +202,7 @@ const formData = {
             successMessage.textContent = 'התור נקבע בהצלחה!';
             successMessage.style.color = 'green';
             successMessage.style.display = 'block';
-            
+
             errorMessage.style.display = 'none';
 
             // איפוס שדות
