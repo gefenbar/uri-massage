@@ -215,7 +215,7 @@ const formData = {
             clearInterval(loadingInterval);
 
             // הצלחה
-            successMessage.textContent = 'התור נשלח בהצלחה!';
+            successMessage.textContent = 'התור נשלח בהצלחה! שלח הודעת WhatsApp לאורי לקביעת התור';
             successMessage.style.color = 'green';
             // SuccessMessage.style.display = 'block';
            // After successful form submission
