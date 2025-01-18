@@ -18,6 +18,22 @@ const timeSlots = ['בוקר', 'צהרים', 'ערב'];
 // משתנה לשמירת נקודת ההתחלה (היום הראשון) של העמוד הנוכחי
 let currentOffset = 0; // נספר בימים (0 זה היום)
 
+/********************************************************
+ * פונקציית השבתה/הפעלה של המשבצות
+ ********************************************************/
+function disableSlots() {
+  const slots = document.querySelectorAll('.time-slot');
+  slots.forEach(slot => {
+    slot.classList.add('disabled');
+  });
+}
+
+function enableSlots() {
+  const slots = document.querySelectorAll('.time-slot');
+  slots.forEach(slot => {
+    slot.classList.remove('disabled');
+  });
+}
 // פונקציה לקבלת שם היום בשבוע בעברית
 function getDayName(dayIndex) {
   const dayNamesHe = ['ראשון','שני','שלישי','רביעי','חמישי'];
@@ -201,24 +217,30 @@ const formData = {
             // הצלחה
             successMessage.textContent = 'התור נשלח בהצלחה!';
             successMessage.style.color = 'green';
-            successMessage.style.display = 'block';
-            // שליחת הודעת WhatsApp
-            const phoneNumber = '+972507431198'; // מספר הטלפון שלך (אורי)
-            const message = `
-            שלום אורי, שמי ${fullName} ומספר הטלפון שלי הוא ${phone}.
-            ברצוני לקבוע תור ליום ${appointmentDate} בשעות ${appointmentTime}.
-            אבקש לקבוע תור עבורי. לשעה: {הכנס שעה}            
-            `;
-            // const message = `
-            
-            // תור חדש נקבע! פרטים:\nתאריך: ${appointmentDate}\nשעה: ${appointmentTime}
-            
-            // `;
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');            // איפוס שדות
-            errorMessage.style.display = 'none';
-            //send whatsapp to the user
+            SuccessMessage.style.display = 'block';
+           // After successful form submission
+              const sendMessage = document.getElementById('sendMessage');
+              const phoneNumber = '972507431198'; // מספר הטלפון ללא הסימן +
+              const message = `שלום אורי, שמי ${fullName} ומספר הטלפון שלי הוא ${phone}.
+              ברצוני לקבוע תור ליום ${appointmentDate} בשעות ה${appointmentTime}.
+              לשעה: {הכנס שעה}`;
 
+              const encodedMessage = encodeURIComponent(message);
+              const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+              // צור קישור לשליחת WhatsApp
+              const whatsappLink = document.createElement('a');
+              whatsappLink.href = whatsappUrl;
+              whatsappLink.target = '_blank';
+              whatsappLink.textContent = 'אישור תור בWhatsApp';
+              whatsappLink.classList.add('whatsapp-link', 'btn');
+
+              // נקה את ההודעה הקודמת
+              sendMessage.innerHTML = '';
+              // הוסף את הקישור
+              sendMessage.appendChild(whatsappLink);
+              // הצג את ההודעה
+              sendMessage.style.display = 'block';
             // איפוס שדות
             requestDateInput.value = '';
             fullNameInput.value = '';
@@ -236,9 +258,10 @@ const formData = {
 /********************************************************
  * הפעלת הרינדור ההתחלתי
  ********************************************************/
-renderCalendar();
+// renderCalendar();
 // פונקציה לקבלת תורים קיימים ולסימון משבצות תפוסות
 async function fetchAndMarkBookedSlots() {
+  disableSlots();
     try {
       const response = await fetch('https://script.google.com/macros/s/AKfycbzumZG1FsBBeMOSZgIqSVSVwvbaq7Y82dI8htg0doZgWSy1gddLlgH5lFGFGjYolriZgw/exec', { method: 'GET' });
       if (!response.ok) {
@@ -282,11 +305,13 @@ async function fetchAndMarkBookedSlots() {
     } catch (error) {
       console.error('Error fetching appointments:', error);
     }
+    enableSlots();
   }
   
   // קריאה לפונקציה כאשר ה-DOM נטען
   document.addEventListener('DOMContentLoaded', () => {
-    // renderCalendar();  // במידת הצורך: דואגים שה־DOM של היומן ייטען לפני
+
+    renderCalendar();  // במידת הצורך: דואגים שה־DOM של היומן ייטען לפני
     fetchAndMarkBookedSlots();
   });
   

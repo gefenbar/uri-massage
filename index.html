@@ -1540,6 +1540,10 @@ section:not(.hero)::before {
     margin-top:50px;
     /* margin-bottom: 50px; */
 }
+.time-slot.disabled {
+    pointer-events: none; /* חוסם כל אינטראקציה */
+    opacity: 0.5;         /* אופציונלי: הופך את האלמנט ל"דהוי" יותר */
+  }
 
         </style>
 </head>
@@ -1736,6 +1740,7 @@ section:not(.hero)::before {
               <button type="submit" class="btn btn-outline-dark animate__animated animate__zoomIn">קבע תור</button>
             
               <div class="success-message" id="successMessage" style="display: none;"></div>
+              <div class="send-message" id="sendMessage" style="display: none;"></div>
               <div class="error-message" id="errorMessage" style="display: none;"></div>
             </form>
             
