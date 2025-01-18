@@ -221,9 +221,7 @@ const formData = {
            // After successful form submission
               const sendMessage = document.getElementById('sendMessage');
               const phoneNumber = '972507431198'; // מספר הטלפון ללא הסימן +
-              const message = `שלום אורי, שמי ${fullName} ומספר הטלפון שלי הוא ${phone}.
-              ברצוני לקבוע תור ליום ${appointmentDate} בשעות ה${appointmentTime}.
-              לשעה: {הכנס שעה}`;
+              const message = `שלום אורי, שמי ${fullName} ומספר הטלפון שלי הוא ${phone}. ברצוני לקבוע תור ליום ${appointmentDate} בשעות ה${appointmentTime}. לשעה: {הכנס שעה}`;
 
               const encodedMessage = encodeURIComponent(message);
               const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
