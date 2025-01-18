@@ -199,11 +199,25 @@ const formData = {
             clearInterval(loadingInterval);
 
             // הצלחה
-            successMessage.textContent = 'התור נקבע בהצלחה!';
+            successMessage.textContent = 'התור נשלח בהצלחה!';
             successMessage.style.color = 'green';
             successMessage.style.display = 'block';
-
+            // שליחת הודעת WhatsApp
+            const phoneNumber = '+972507431198'; // מספר הטלפון שלך (אורי)
+            const message = `
+            שלום אורי, שמי ${fullName} ומספר הטלפון שלי הוא ${phone}.
+            ברצוני לקבוע תור ליום ${appointmentDate} בשעות ${appointmentTime}.
+            אבקש לקבוע תור עבורי. לשעה: {הכנס שעה}            
+            `;
+            // const message = `
+            
+            // תור חדש נקבע! פרטים:\nתאריך: ${appointmentDate}\nשעה: ${appointmentTime}
+            
+            // `;
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');            // איפוס שדות
             errorMessage.style.display = 'none';
+            //send whatsapp to the user
 
             // איפוס שדות
             requestDateInput.value = '';
