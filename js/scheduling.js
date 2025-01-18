@@ -217,7 +217,7 @@ const formData = {
             // הצלחה
             successMessage.textContent = 'התור נשלח בהצלחה!';
             successMessage.style.color = 'green';
-            SuccessMessage.style.display = 'block';
+            // SuccessMessage.style.display = 'block';
            // After successful form submission
               const sendMessage = document.getElementById('sendMessage');
               const phoneNumber = '972507431198'; // מספר הטלפון ללא הסימן +
