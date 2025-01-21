@@ -719,9 +719,6 @@ width: 100%;
 height: 100%;
 opacity: 0.03;
 z-index: -1;
-/* background-image: 
-linear-gradient(135deg, #228b22 25%, transparent 25%),
-linear-gradient(225deg, #228b22 25%, transparent 25%); */
 background-size: 50px 50px;
 }
 
@@ -737,12 +734,10 @@ justify-content: center;
 height: 70vh;
 padding: 3rem 1rem;
 margin: 1rem;
-/* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-        url('hero.jpg') center/cover no-repeat; */
 color: white;
 text-align: center;
 border-radius: 0.5rem;
-background-color: #ffe6cc; /* Fallback background */
+background-color: #ffe6cc; 
 }
 
 .hero img {
