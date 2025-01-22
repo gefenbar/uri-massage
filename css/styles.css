@@ -1030,9 +1030,33 @@ color: #2C3E50 !important;
 
 .hero-content {
 padding: 10%;
-background: rgba(255, 255, 255, 0.8);
+/* background: rgba(255, 255, 255, 0.8); */
 border-radius: 0.5rem;
 }
+.hero-content h1{
+ color: white!important;
+  text-shadow:
+    1px 0 0 #000,
+    -1px 0 0 #000,
+    0 1px 0 #000,
+    0 -1px 0 #000,
+    1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000;}
+
+.hero-content p {
+
+        color: white!important;
+        text-shadow:
+          1px 0 0 #000,
+          -1px 0 0 #000,
+          0 1px 0 #000,
+          0 -1px 0 #000,
+          1px 1px 0 #000,
+          -1px 1px 0 #000,
+          1px -1px 0 #000,
+          -1px -1px 0 #000;}
 
 .section {
 padding: 1.5rem 0;
@@ -1470,7 +1494,7 @@ margin: 10px;
 }
 /* .text-muted{display: unset;} */
 .text-muted{padding: 0;}
-.text-muted li{list-style: none;}
+.text-muted li{list-style: outside;}
 /* Hero Fade Effect */
 section {
 position: relative;
