@@ -117,7 +117,7 @@ function renderCalendar() {
     for (let d = 0; d < 5; d++) {
       const dayIndex = d; 
       // מחשבים את התאריך עבור המשבצת הזאת
-      const dayDate = addDaysToDate(today, currentOffset + w*7 + d);
+      const dayDate = addDaysToDate(today, currentOffset + w*7 + d+1);
 
       const dayColumn = document.createElement('div');
       dayColumn.classList.add('day-column');
