@@ -117,14 +117,41 @@ line-height: 1.6;
 
 
 
+#side-social-icons div a{
+  background-color: #d56b00;
+  border-radius: 50px;
+  margin-top:5px;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  text-decoration: none!important;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+} 
 
+#side-social-icons:hover{
+  background-color: orange;
+  border-radius: 50px;
+
+}
+
+/* #side-social-icons i{ */
+  /* align-items: center;
+  justify-content: center; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+/* } */
 /* .hero-cta-group {
 display: flex;
 gap: 0.5rem;
 flex-wrap: wrap;
 } */
 
-.hero-cta-group .btn {
+.hero-cta-group .btn {  
 min-width: 150px;
 text-align: center;
 padding: 0.8rem 1.5rem;
