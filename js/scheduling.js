@@ -36,7 +36,7 @@ function enableSlots() {
 }
 // פונקציה לקבלת שם היום בשבוע בעברית
 function getDayName(dayIndex) {
-  const dayNamesHe = ['ראשון','שני','שלישי','רביעי','חמישי'];
+  const dayNamesHe = ['ראשון','שני','שלישי','רביעי','חמישי','שישי','שבת'];
   return dayNamesHe[dayIndex];
 }
 
@@ -115,46 +115,50 @@ function renderCalendar() {
 
     // בואו נניח שיום ראשון הוא index=0, שני=1, וכו'.
     for (let d = 0; d < 5; d++) {
-      const dayIndex = d; 
-      // מחשבים את התאריך עבור המשבצת הזאת
-      const dayDate = addDaysToDate(today, currentOffset + w*7 + d);
-
+      const dayDate = addDaysToDate(today, currentOffset + w*7 + d);  
+      const actualDayIndex = dayDate.getDay(); // 0..6 ע"פ JS (0=Sunday, 6=Saturday)
+    
       const dayColumn = document.createElement('div');
       dayColumn.classList.add('day-column');
-
+    
       // כותרת היום בשבוע + תאריך
       const dayTitle = document.createElement('h4');
       let shortDate = [];
-      shortDate.push(formatDate(dayDate).split("/")[0]);
-      shortDate.push(formatDate(dayDate).split("/")[1]);
-      dayTitle.innerHTML = `${getDayName(dayIndex)}<br>${shortDate.join("/")}`;
+      shortDate.push(formatDate(dayDate).split("/")[0]); // יום
+      shortDate.push(formatDate(dayDate).split("/")[1]); // חודש
+      dayTitle.innerHTML = `${getDayName(actualDayIndex)}<br>${shortDate.join("/")}`;
       dayTitle.dataset.date = formatDate(dayDate);
       dayColumn.appendChild(dayTitle);
-
-      // יצירת משבצות שעות
+    
+      // יצירת משבצות השעות
       timeSlots.forEach(time => {
         const slotDiv = document.createElement('div');
         slotDiv.classList.add('time-slot');
         slotDiv.textContent = time;
+    
         slotDiv.onclick = () => {
-        const timeSlots = document.querySelectorAll('.time-slot');
-        timeSlots.forEach(slot => {
-            if(!(slot.classList.contains('booked'))) {
-            slot.style.backgroundColor = '#f5f5f5';
-            slot.style.color = '#212529';
+          // איפוס צבעים לשאר המשבצות הפנויות
+          const allTimeSlots = document.querySelectorAll('.time-slot');
+          allTimeSlots.forEach(slot => {
+            if (!slot.classList.contains('booked')) {
+              slot.style.backgroundColor = '#f5f5f5';
+              slot.style.color = '#212529';
             }
-        }); 
-        
+          });
+          // מילוי ערכי הטופס
           appointmentDateInput.value = formatDate(dayDate);
           appointmentTimeInput.value = time;
+          // הדגשת המשבצת שנבחרה
           slotDiv.style.backgroundColor = '#d56b00';
           slotDiv.style.color = 'white';
         };
+    
         dayColumn.appendChild(slotDiv);
       });
-
+    
       weekDiv.appendChild(dayColumn);
     }
+    
 
     calendarDiv.appendChild(weekDiv);
 
