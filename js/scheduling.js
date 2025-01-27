@@ -113,56 +113,69 @@ function renderCalendar() {
     const weekDiv = document.createElement('div');
     weekDiv.classList.add('week-container');
 
-    // בואו נניח שיום ראשון הוא index=0, שני=1, וכו'.
-    for (let d = 0; d < 5; d++) {
-      const dayDate = addDaysToDate(today, currentOffset + w*7 + d);  
-      const actualDayIndex = dayDate.getDay(); // 0..6 ע"פ JS (0=Sunday, 6=Saturday)
+    for (let w = 0; w < WEEKS_PER_PAGE; w++) {
+      const weekDiv = document.createElement('div');
+      weekDiv.classList.add('week-container');
     
-      const dayColumn = document.createElement('div');
-      dayColumn.classList.add('day-column');
+      let displayedDays = 0;   // כמה ימים כבר הצגנו בעמוד הנוכחי
+      let offsetDays = 0;      // כמה ימים לספור מהיום הנוכחי
     
-      // כותרת היום בשבוע + תאריך
-      const dayTitle = document.createElement('h4');
-      let shortDate = [];
-      shortDate.push(formatDate(dayDate).split("/")[0]); // יום
-      shortDate.push(formatDate(dayDate).split("/")[1]); // חודש
-      dayTitle.innerHTML = `${getDayName(actualDayIndex)}<br>${shortDate.join("/")}`;
-      dayTitle.dataset.date = formatDate(dayDate);
-      dayColumn.appendChild(dayTitle);
+      // רוץ עד שהצגת 5 ימים (או 5 ימים *מסוימים* אם תרצו)
+      while (displayedDays < 5) {
+        // חישוב התאריך לפי ההיסט/offset
+        const dayDate = addDaysToDate(today, currentOffset + w * 7 + offsetDays);
+        const jsDayOfWeek = dayDate.getDay(); // 0=ראשון, 1=שני, ... 6=שבת
     
-      // יצירת משבצות השעות
-      timeSlots.forEach(time => {
-        const slotDiv = document.createElement('div');
-        slotDiv.classList.add('time-slot');
-        slotDiv.textContent = time;
+        // בדיקה אם זה שישי(5) או שבת(6):
+        if (jsDayOfWeek !== 5 && jsDayOfWeek !== 6) {
+          // אם זה לא שישי ולא שבת – מציגים את היום
+          const dayColumn = document.createElement('div');
+          dayColumn.classList.add('day-column');
     
-        slotDiv.onclick = () => {
-          // איפוס צבעים לשאר המשבצות הפנויות
-          const allTimeSlots = document.querySelectorAll('.time-slot');
-          allTimeSlots.forEach(slot => {
-            if (!slot.classList.contains('booked')) {
-              slot.style.backgroundColor = '#f5f5f5';
-              slot.style.color = '#212529';
-            }
+          // בניית כותרת היום (שם היום + תאריך קצר)
+          const dayTitle = document.createElement('h4');
+          const shortDate = formatDate(dayDate).split('/'); // [DD, MM, YYYY]
+          const dayNameHe = getDayName(jsDayOfWeek);        // למשל 'ראשון', 'שני', ...
+          dayTitle.innerHTML = `${dayNameHe}<br>${shortDate[0]}/${shortDate[1]}`;
+          dayTitle.dataset.date = formatDate(dayDate);
+          dayColumn.appendChild(dayTitle);
+    
+          // יצירת המשבצות לשעות (timeSlots)
+          timeSlots.forEach(time => {
+            const slotDiv = document.createElement('div');
+            slotDiv.classList.add('time-slot');
+            slotDiv.textContent = time;
+            
+            slotDiv.onclick = () => {
+              // קודם ננקה הבחירות הקודמות
+              const allTimeSlots = document.querySelectorAll('.time-slot');
+              allTimeSlots.forEach(slot => {
+                if (!slot.classList.contains('booked')) {
+                  slot.style.backgroundColor = '#f5f5f5';
+                  slot.style.color = '#212529';
+                }
+              });
+              // נעדכן את הטופס
+              appointmentDateInput.value = formatDate(dayDate);
+              appointmentTimeInput.value = time;
+              // נסמן את הסלוט שנבחר
+              slotDiv.style.backgroundColor = '#d56b00';
+              slotDiv.style.color = 'white';
+            };
+    
+            dayColumn.appendChild(slotDiv);
           });
-          // מילוי ערכי הטופס
-          appointmentDateInput.value = formatDate(dayDate);
-          appointmentTimeInput.value = time;
-          // הדגשת המשבצת שנבחרה
-          slotDiv.style.backgroundColor = '#d56b00';
-          slotDiv.style.color = 'white';
-        };
     
-        dayColumn.appendChild(slotDiv);
-      });
+          weekDiv.appendChild(dayColumn);
+          displayedDays++; // ספרנו עוד יום שהצגנו
+        }
     
-      weekDiv.appendChild(dayColumn);
+        offsetDays++; // בין אם הצגנו ובין אם דילגנו – עוברים ליום הבא
+      }
+    
+      calendarDiv.appendChild(weekDiv);
     }
-    
-
-    calendarDiv.appendChild(weekDiv);
-
-  }
+  }    
 }
 
 /********************************************************
