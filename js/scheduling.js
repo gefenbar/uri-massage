@@ -112,72 +112,63 @@ function renderCalendar() {
   for (let w = 0; w < WEEKS_PER_PAGE; w++) {
     const weekDiv = document.createElement('div');
     weekDiv.classList.add('week-container');
-
-    for (let w = 0; w < WEEKS_PER_PAGE; w++) {
-      const weekDiv = document.createElement('div');
-      weekDiv.classList.add('week-container');
-    
-      let displayedDays = 0;   // כמה ימים כבר הצגנו בעמוד הנוכחי
-      let offsetDays = 0;      // כמה ימים לספור מהיום הנוכחי
-    
-      // רוץ עד שהצגת 5 ימים (או 5 ימים *מסוימים* אם תרצו)
-      while (displayedDays < 5) {
-        // חישוב התאריך לפי ההיסט/offset
-        const dayDate = addDaysToDate(today, currentOffset + w * 7 + offsetDays);
-        const jsDayOfWeek = dayDate.getDay(); // 0=ראשון, 1=שני, ... 6=שבת
-    
-        // בדיקה אם זה שישי(5) או שבת(6):
-        if (jsDayOfWeek !== 5 && jsDayOfWeek !== 6) {
-          // אם זה לא שישי ולא שבת – מציגים את היום
-          const dayColumn = document.createElement('div');
-          dayColumn.classList.add('day-column');
-    
-          // בניית כותרת היום (שם היום + תאריך קצר)
-          const dayTitle = document.createElement('h4');
-          const shortDate = formatDate(dayDate).split('/'); // [DD, MM, YYYY]
-          const dayNameHe = getDayName(jsDayOfWeek);        // למשל 'ראשון', 'שני', ...
-          dayTitle.innerHTML = `${dayNameHe}<br>${shortDate[0]}/${shortDate[1]}`;
-          dayTitle.dataset.date = formatDate(dayDate);
-          dayColumn.appendChild(dayTitle);
-    
-          // יצירת המשבצות לשעות (timeSlots)
-          timeSlots.forEach(time => {
-            const slotDiv = document.createElement('div');
-            slotDiv.classList.add('time-slot');
-            slotDiv.textContent = time;
-            
-            slotDiv.onclick = () => {
-              // קודם ננקה הבחירות הקודמות
-              const allTimeSlots = document.querySelectorAll('.time-slot');
-              allTimeSlots.forEach(slot => {
-                if (!slot.classList.contains('booked')) {
-                  slot.style.backgroundColor = '#f5f5f5';
-                  slot.style.color = '#212529';
-                }
-              });
-              // נעדכן את הטופס
-              appointmentDateInput.value = formatDate(dayDate);
-              appointmentTimeInput.value = time;
-              // נסמן את הסלוט שנבחר
-              slotDiv.style.backgroundColor = '#d56b00';
-              slotDiv.style.color = 'white';
-            };
-    
-            dayColumn.appendChild(slotDiv);
+  
+    let displayedDays = 0; // מונה הימים שהוצגו בפועל
+    const startOffset = currentOffset + w * 7; // לחשב את נקודת ההתחלה לשבוע
+  
+    for (let offsetDays = 0; displayedDays < 5; offsetDays++) {
+      const dayDate = addDaysToDate(today, startOffset + offsetDays);
+      const jsDayOfWeek = dayDate.getDay(); // קבלת היום בשבוע (0=ראשון, 6=שבת)
+  
+      // דילוג על שישי ושבת
+      if (jsDayOfWeek === 5 || jsDayOfWeek === 6) continue;
+  
+      // יצירת עמודה ליום (dayColumn)
+      const dayColumn = document.createElement('div');
+      dayColumn.classList.add('day-column');
+  
+      // כותרת היום
+      const shortDate = formatDate(dayDate).split('/'); // [DD, MM, YYYY]
+      const dayNameHe = getDayName(jsDayOfWeek); // שם היום בעברית
+      const dayTitle = document.createElement('h4');
+      dayTitle.innerHTML = `${dayNameHe}<br>${shortDate[0]}/${shortDate[1]}`;
+      dayTitle.dataset.date = formatDate(dayDate);
+      dayColumn.appendChild(dayTitle);
+  
+      // יצירת משבצות השעות
+      const fragment = document.createDocumentFragment(); // אופטימיזציה עם fragment
+      timeSlots.forEach(time => {
+        const slotDiv = document.createElement('div');
+        slotDiv.classList.add('time-slot');
+        slotDiv.textContent = time;
+  
+        slotDiv.onclick = () => {
+          // ניקוי בחירות קודמות
+          document.querySelectorAll('.time-slot').forEach(slot => {
+            if (!slot.classList.contains('booked')) {
+              slot.style.backgroundColor = '#f5f5f5';
+              slot.style.color = '#212529';
+            }
           });
-    
-          weekDiv.appendChild(dayColumn);
-          displayedDays++; // ספרנו עוד יום שהצגנו
-        }
-    
-        offsetDays++; // בין אם הצגנו ובין אם דילגנו – עוברים ליום הבא
-      }
-    
-      calendarDiv.appendChild(weekDiv);
+          // עדכון הטופס
+          appointmentDateInput.value = formatDate(dayDate);
+          appointmentTimeInput.value = time;
+          // סימון המשבצת הנבחרת
+          slotDiv.style.backgroundColor = '#d56b00';
+          slotDiv.style.color = 'white';
+        };
+  
+        fragment.appendChild(slotDiv);
+      });
+      dayColumn.appendChild(fragment); // הוספת כל המשבצות בבת אחת
+  
+      weekDiv.appendChild(dayColumn);
+      displayedDays++;
     }
-  }    
-}
-
+  
+    calendarDiv.appendChild(weekDiv);
+ } }
+  
 /********************************************************
  * שליחת טופס ל-Google Sheet
  ********************************************************/
