@@ -316,8 +316,7 @@ async function fetchAndMarkBookedSlots() {
   
   // קריאה לפונקציה כאשר ה-DOM נטען
   document.addEventListener('DOMContentLoaded', () => {
-
-    renderCalendar();  // במידת הצורך: דואגים שה־DOM של היומן ייטען לפני
+    renderCalendar(); 
     fetchAndMarkBookedSlots();
   });
   
