@@ -298,7 +298,7 @@ async function fetchAndMarkBookedSlots() {
             timeSlots.forEach(slot => {
               // השוואת שעות
               if (slot.textContent.trim() === appointmentTimeStr) {
-                slot.style.backgroundColor = 'red';
+                slot.style.backgroundColor = '#a128ab';
                 slot.style.color = 'white';
                 slot.classList.add('booked');
                 slot.textContent = 'תפוס';
@@ -316,6 +316,7 @@ async function fetchAndMarkBookedSlots() {
   
   // קריאה לפונקציה כאשר ה-DOM נטען
   document.addEventListener('DOMContentLoaded', () => {
+
     renderCalendar(); 
     fetchAndMarkBookedSlots();
   });
