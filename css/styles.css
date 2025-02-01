@@ -247,7 +247,7 @@ margin-bottom: 1.5rem;
 text-align: center;
 }
 
-#testimonials{background-color: white;}
+#testimonials{background-color: #ffe6cc;}
 /* Testimonials Carousel */
 
 .testimonials-carousel {
@@ -306,7 +306,7 @@ padding: 1rem;
 box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);
 text-align: center;
 transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-background-color: #f8f9fa;
+background-color: white;
 border-radius: 20px;
 margin-bottom: 20px;
 padding-top: 0px;
@@ -318,7 +318,7 @@ flex-direction: column;
 justify-content: space-between;
 height: 250px;
 position: relative;
-background-color: #ffe6cc;
+/* background-color: #ffe6cc; */
 }
 
 
@@ -1025,9 +1025,9 @@ display: flex;
 scroll-snap-type: x mandatory;
 gap: 1rem;
 }
-#contact{background-color: #ffe6cc;}
+#contact{background-color: white;}
 .contact-info {
-background: white!important;
+background: #ffe6cc!important;
 border-radius: 0.5rem;
 padding: 1rem;
 box-shadow: 0 4px 6px rgba(181, 205, 163, 0.1);

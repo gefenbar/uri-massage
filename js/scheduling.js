@@ -317,7 +317,7 @@ async function fetchAndMarkBookedSlots() {
   // קריאה לפונקציה כאשר ה-DOM נטען
   document.addEventListener('DOMContentLoaded', () => {
 
-    renderCalendar(); 
-    fetchAndMarkBookedSlots();
+    // renderCalendar(); 
+    // fetchAndMarkBookedSlots();
   });
   
