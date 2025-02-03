@@ -1477,6 +1477,7 @@ border-radius: 20px;
 border: none;
 outline: none;
 direction: rtl;
+text-align: center;
 }
 #appointment-form button {
 margin-top: 25px;
