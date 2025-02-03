@@ -278,3 +278,27 @@ $('.contact-method').on('click', function() {
     }
 });
 
+
+$('#sendWhatsapp').on('click', function() {
+
+    // קבלת ערך מהשדה
+    let fullName = $('#fullName').val().trim();
+    
+    // בדיקה שהמשתמש הזין שם
+    if (fullName === '') {
+      alert('נא להזין שם מלא');
+      return;
+    }
+    
+    // בניית ההודעה – ניתן לשנות את הטקסט כרצונכם
+    let message = "שלום אורי, שמי " + fullName + " ואני רוצה לקבוע טיפול";
+    
+    // קידוד ההודעה כדי שתעבוד כראוי ב-URL
+    let encodedMessage = encodeURIComponent(message);
+    
+    // יצירת ה-URL עם הפרמטרים המתאימים
+    let url = "https://api.whatsapp.com/send?phone=972507431198&text=" + encodedMessage;
+    
+    // פתיחת WhatsApp עם ההודעה המוכנה (ניתן גם להשתמש ב-window.location.href)
+    window.open(url, "_blank");
+  });
