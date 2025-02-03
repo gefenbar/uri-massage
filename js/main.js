@@ -291,7 +291,7 @@ $('#sendWhatsapp').on('click', function() {
     }
     
     // בניית ההודעה – ניתן לשנות את הטקסט כרצונכם
-    let message = "שלום אורי, שמי " + fullName + " ואני רוצה לקבוע טיפול";
+    let message = "שלום שמי " + fullName + " ואני מעונין/ינת לקבוע טיפול";
     
     // קידוד ההודעה כדי שתעבוד כראוי ב-URL
     let encodedMessage = encodeURIComponent(message);
