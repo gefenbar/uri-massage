@@ -1618,7 +1618,6 @@ opacity: 0.5;         /* אופציונלי: הופך את האלמנט ל"דה�
   padding: 0 1.5rem;
   background-color: white;
   text-align: right;
-
 }
 .faq-answer p, .faq-answer ul {
   color: var(--secondary-color);
